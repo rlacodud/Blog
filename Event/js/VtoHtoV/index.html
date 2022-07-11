@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>V to H to V</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="https://use.typekit.net/skn8ash.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <section id="section1">section1</section>
+
+    <div class="pin-spacer">
+      <section id="sectionPin">
+        <div class="pin-wrap">
+          <div class="img"></div>
+          <div class="img"></div>
+          <div class="img"></div>
+        </div>
+      </section>
+    </div>
+
+    <section id="section3">section3</section>
+  </div>
+
+  <script src="./js/scrollTrigger.min.js"></script>
+  <script src="./js/gsap.min.js"></script>
+  <script src="./js/locomotive_scroll.min.js"></script>
+  <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+  <script id="rendered-js">
+    gsap.registerPlugin(ScrollTrigger);
+
+    const pageContainer = document.querySelector(".container");
+
+    /* SMOOTH SCROLL */
+    const scroller = new LocomotiveScroll({
+      el: pageContainer,
+      smooth: true
+    });
+
+    scroller.on("scroll", ScrollTrigger.update);
+
+    ScrollTrigger.scrollerProxy(pageContainer, {
+      scrollTop(value) {
+        return arguments.length ?
+          scroller.scrollTo(value, 0, 0) :
+          scroller.scroll.instance.scroll.y;
+      },
+      getBoundingClientRect() {
+        return {
+          left: 0,
+          top: 0,
+          width: window.innerWidth,
+          height: window.innerHeight
+        };
+
+      },
+      pinType: pageContainer.style.transform ? "transform" : "fixed"
+    });
+
+    window.addEventListener("load", function () {
+      let pinBoxes = document.querySelectorAll(".pin-wrap > *");
+      let pinWrap = document.querySelector(".pin-wrap");
+      let pinWrapWidth = pinWrap.offsetWidth;
+      let horizontalScrollLength = pinWrapWidth - window.innerWidth;
+
+      gsap.to(".pin-wrap", {
+        scrollTrigger: {
+          scroller: pageContainer,
+          scrub: true,
+          trigger: "#sectionPin",
+          pin: true,
+          start: "top top",
+          end: pinWrapWidth
+        },
+
+        x: -horizontalScrollLength,
+        ease: "none"
+      });
+
+
+      ScrollTrigger.addEventListener("refresh", () => scroller.update());
+
+      ScrollTrigger.refresh();
+    });
+  </script>
+</body>
+</html>

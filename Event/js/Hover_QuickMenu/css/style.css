@@ -1,0 +1,46 @@
+.float-menu {position: fixed; z-index: 10000; bottom: calc(100vw*65/1920); right: calc(100vw*80/1920);}
+.float-menu .button {position: relative; width: calc(100vw*80/1920); height: calc(100vw*80/1920); border-radius: 50%; background: #CC2132; cursor: pointer; z-index: 1000;}
+.float-menu #quote .icon {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: calc(100vw*40/1920); height: calc(100vw*32.52/1920); background-image: url('../img/float_icon.png'); background-position: center; background-repeat: no-repeat; background-size: cover; object-fit: cover; transition: all ease-in-out 0.3s;}
+.float-menu #quote.on .icon {background-image: url('../img/close.png'); width: calc(100vw*26/1920); height: calc(100vw*26/1920);}
+.dropup-content {opacity: 0; position: absolute; bottom: calc(100vw * 0 / 1920); transition: all ease-in-out 0.3s;}
+.dropup-content .quick {overflow: hidden; position: relative; width: calc(100vw*80/1920); height: calc(100vw*80/1920); border-radius: 50%; background: #222222; transition: all ease-in-out 0.3s; cursor: pointer;}
+.dropup-content .quick.on {width: calc(100vw*260/1920); border-radius: calc(100vw*80/1920); margin: 0; margin-left: calc(100vw*-180/1920);}
+.dropup-content .quick .icon.on {left: 18%;}
+.dropup-content .quick:nth-child(1) .icon::after {display: none; opacity: 0; transition: all ease-in-out 0.3s; content: '온라인으로 구입차량의 위치를 조회하세요'; position: absolute; top: 0; left: calc(100vw*45/1920); font-size: calc(100vw*14/1920); line-height: calc(100vw*16/1920); color: #fff; width: calc(100vw*130/1920);}
+.dropup-content .quick:nth-child(1) .icon.on::after {display: block; opacity: 1;}
+.dropup-content .quick:nth-child(2) .icon::after {display: none; opacity: 0; transition: all ease-in-out 0.3s; content: '무엇을 도와드릴까요? 온라인구매입니다'; position: absolute; top: 0; left: calc(100vw*45/1920); font-size: calc(100vw*14/1920); line-height: calc(100vw*16/1920); color: #fff; width: calc(100vw*120/1920);}
+.dropup-content .quick:nth-child(2) .icon.on::after {display: block; opacity: 1;}
+.dropup-content .quick:nth-child(3) .icon::after {display: none; opacity: 0; transition: all ease-in-out 0.3s; content: '빠르고 편리하게 도와드리는 혼다코리아 챗봇입니다'; position: absolute; top: 0; left: calc(100vw*45/1920); font-size: calc(100vw*14/1920); line-height: calc(100vw*16/1920); color: #fff; width: calc(100vw*152/1920);}
+.dropup-content .quick:nth-child(3) .icon.on::after {display: block; opacity: 1;}
+.dropup-content .quick .icon {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-position: center; background-repeat: no-repeat; background-size: cover; object-fit: cover; transition: all ease-in-out 0.3s;}
+.dropup-content .quick:nth-child(1) {margin-top: calc(100vw*20/1920);}
+.dropup-content .quick:nth-child(1) .icon {background-image: url('../img/quick_1.png'); width: calc(100vw*28.47/1920); height: calc(100vw*36/1920);}
+.dropup-content .quick:nth-child(2) {margin: calc(100vw*20/1920) 0;}
+.dropup-content .quick:nth-child(2).on {margin: calc(100vw*20/1920) 0; margin-left: calc(100vw*-180/1920);}
+.dropup-content .quick:nth-child(2) .icon {background-image: url('../img/quick_2.png'); width: calc(100vw*32/1920); height: calc(100vw*27.53/1920);}
+.dropup-content .quick:nth-child(3) .icon {background-image: url('../img/quick_3.png'); width: calc(100vw*30/1920); height: calc(100vw*30/1920); position: relative;}
+.chat-message__content {text-align: center; width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.dropup-content.on {opacity: 1; bottom: calc(100vw * 100 / 1920);}
+.dropup-content.on .quick:nth-child(1) {margin-top: 0;}
+:root {--loader-size: calc(100vw*4/1920);	--loader-spacing: 0.3125rem; --loader-background: rgba(255, 255, 255, 0.1);	--loader-background-active: #222; --loader-animation-duration: 0.8s;}
+.loader {position: relative; margin-left: calc(var(--loader-spacing) + var(--loader-size)); margin-right: calc(var(--loader-spacing) + var(--loader-size)); animation-delay: calc(var(--loader-animation-duration) / 3);}
+.loader,
+.loader::before,
+.loader::after {vertical-align: middle; display: inline-block; width: var(--loader-size); height: var(--loader-size); background: var(--loader-background); border-radius: 100%; animation-name: loader; animation-duration: var(--loader-animation-duration); animation-iteration-count: infinite; animation-timing-function: linear;}
+.loader::before,
+.loader::after {content: ''; position: absolute; top: 0;}
+.loader::before {left: calc((var(--loader-spacing) + var(--loader-size)) * -1);}
+.loader::after {right: calc((var(--loader-spacing) + var(--loader-size)) * -1);	animation-delay: calc(var(--loader-animation-duration) / 3 * 2);}
+@keyframes loader {
+	0%,
+	66%,
+	100% {
+		transform: translateY(10%);
+		background: var(--loader-background);
+	}
+
+	33% {
+		transform: translateY(-25%);
+		background: var(--loader-background-active);
+	}
+}

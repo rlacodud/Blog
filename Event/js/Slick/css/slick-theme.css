@@ -1,0 +1,34 @@
+/* Arrows */
+.slick-prev,
+.slick-next {position: absolute; display: block; top: 50%; transform: translate(0, -50%); padding: 0 0; font-size: calc(100vw * 50 / 1920); line-height: 0; cursor: pointer; background: transparent; color: transparent; border: none; outline: none;}
+.slick-prev:hover,
+.slick-prev:focus {background-image: url("../img/prev_over.png"); background-repeat: no-repeat;}
+.slick-next:hover,
+.slick-next:focus {outline: none; color: transparent; background: transparent;}
+.slick-prev:hover:before,
+.slick-prev:focus:before {background-image: url("../img/prev_over.png"); background-repeat: no-repeat;}
+.slick-next:hover:before,
+.slick-next:focus:before {background-repeat: no-repeat; background-image: url("../img/next_over.png");}
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {opacity: .25;}
+.slick-prev:before,
+.slick-next:before {font-family: 'slick'; font-size: calc(100vw * 40 / 1920); line-height: 1; opacity: 1; color: black; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
+.slick-prev {z-index: 1; left: 1%;}
+[dir='rtl'] .slick-prev {right: 6%; left: auto;}
+.slick-prev:before {content: '<'; display: block;}
+[dir='rtl'] .slick-prev:before {content: '<';}
+.slick-next {right: 1%;}
+[dir='rtl'] .slick-next {right: auto; left: -1%;}
+.slick-next:before {content: '>'; display: block;}
+[dir='rtl'] .slick-next:before {content: '>';}
+/* Dots */
+.slick-dotted.slick-slider {margin-bottom: calc(100vw * 40 / 1920);}
+.slick-dots {position: absolute; display: block; bottom: 0.5%; width: 100%; margin: 0; padding: 0; text-align: center; list-style: none;}
+.slick-dots li {position: relative; display: inline-block; width: calc(100vw * 20 / 1920); height: calc(100vw * 20 / 1920); margin: 0 calc(100vw * 5 / 1920); padding: 0; cursor: pointer;}
+.slick-dots li button {display: block; width: calc(100vw * 20 / 1920); height: calc(100vw * 20 / 1920); padding: calc(100vw * 5 / 1920); font-size: 0; line-height: 0; color: transparent; background: transparent; border: 0; outline: none; cursor: pointer;}
+.slick-dots li button:hover,
+.slick-dots li button:focus {outline: none;}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {opacity: 1;}
+.slick-dots li button:before {content: ""; position: absolute; top: 0; left: 0; width: calc(100vw * 12 / 1920); height: calc(100vw * 12 / 1920); border: 1px solid #F6B64E; color: #000; background: #F6B64E; border-radius: 50%; font-family: 'slick'; font-size: calc(100vw * 6 / 1920); text-align: center; line-height: calc(100vw * 20 / 1920); opacity: .25; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
+.slick-dots li.slick-active button:before {opacity: .75; color: #000;}

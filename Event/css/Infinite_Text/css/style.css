@@ -1,0 +1,9 @@
+.marquee.horizontal {position: absolute; font-size: calc(100vw * 21 / 1920); white-space: nowrap; animation: marquee_h 15s linear infinite; animation-delay: -10s; z-index: 100; width: 100%; margin: 0 auto; overflow: hidden;}
+@keyframes marquee_h {
+	0% {
+		text-indent: 0em
+	}
+	100% {
+		text-indent: -127.5em
+	}
+}

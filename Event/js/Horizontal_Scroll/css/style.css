@@ -1,0 +1,8 @@
+html, body {width: 100%; height: 100vh; overflow: hidden;}
+.var-wrap {width: 400vw; height: 100%;}
+article{width: 100vw; height: 100vh; float: left; position: relative;}
+#one {background: red;}
+#two {background: black;}
+#three {background: green;}
+#four {background: orange;}
+.clear ::after {content: ""; display: table; clear: both;}

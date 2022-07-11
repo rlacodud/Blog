@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LG Gram Buy</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <div class="left">
+        <a href="../index.html"><div class="arrow"></div></a>
+      </div>
+      <div class="center">
+        <p class="noto-sans">가격비교</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="top">
+    <div class="container">
+      <p class="noto-sans">필터를 선택하여 조건에 맞는 제품을 확인해 보세요.</p>
+    </div>
+  </div>
+
+  <div class="main-container">
+    <div class="content" id="display">
+      <div class="title-container">
+        <div class="left">
+          <p class="noto-sans">디스플레이</p>
+        </div>
+        <div class="right">
+          <p class="open-sans" id="option"></p>
+          <div class="up"></div>
+        </div>
+      </div>
+      <div class="model-list display">
+        <div class="model-opt" data-name="13in (33.7 cm)">
+          <div class="text-container">
+            <p class="title open-sans">13in</p>
+            <p class="sub open-sans">(33.7 cm)</p>
+          </div>
+        </div>
+        <div class="model-opt" data-name="14in (35.6 cm)">
+          <div class="text-container">
+            <p class="title open-sans">14in</p>
+            <p class="sub open-sans">(35.6 cm)</p>
+          </div>
+        </div>
+        <div class="model-opt" data-name="15in (39.6 cm)">
+          <div class="text-container">
+            <p class="title open-sans">15in</p>
+            <p class="sub open-sans">(39.6 cm)</p>
+          </div>
+        </div>
+        <div class="model-opt" data-name="16in (40.6 cm)">
+          <div class="text-container">
+            <p class="title open-sans">16in</p>
+            <p class="sub open-sans">(40.6 cm)</p>
+          </div>
+        </div>
+        <div class="model-opt" data-name="17in (43.1 cm)">
+          <div class="text-container">
+            <p class="title open-sans">17in</p>
+            <p class="sub open-sans">(43.1 cm)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="border"></div>
+    <div class="content" id="os">
+      <div class="title-container">
+        <div class="left">
+          <p class="noto-sans">운영체제(OS)</p>
+        </div>
+        <div class="right">
+          <p class="open-sans" id="option"></p>
+          <div class="up"></div>
+        </div>
+      </div>
+      <div class="model-list single">
+        <div class="model-opt" id="window10" data-name="Windows 10">
+          <div class="text-container">
+            <div class="icon"></div>
+            <p class="sub open-sans">Windows 10</p>
+          </div>
+        </div>
+        <div class="model-opt" id="window11" data-name="Windows 11">
+          <div class="text-container">
+            <div class="icon"></div>
+            <p class="sub open-sans">Windows 11</p>
+          </div>
+        </div>
+        <div class="model-opt" id="whale" data-name="whale OS">
+          <div class="text-container">
+            <div class="icon"></div>
+            <p class="sub open-sans">whale OS</p>
+          </div>
+        </div>
+        <div class="model-opt" id="chrome" data-name="Chrome OS">
+          <div class="text-container">
+            <div class="icon"></div>
+            <p class="sub open-sans">Chrome OS</p>
+          </div>
+        </div>
+        <div class="model-opt" id="noos" data-name="OS 미탑재">
+          <div class="text-container">
+            <div class="icon"></div>
+            <p class="sub open-sans">OS 미탑재</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="border"></div>
+    <div class="content" id="graphic">
+      <div class="title-container">
+        <div class="left">
+          <p class="noto-sans">그래픽</p>
+        </div>
+        <div class="right">
+          <p class="open-sans" id="option"></p>
+          <div class="up"></div>
+        </div>
+      </div>
+      <div class="model-list single">
+        <div class="model-opt" id="GeForce" data-name="NVIDIA® GeForce®">
+          <div class="text-container">
+            <p class="title open-sans">NVIDIA®</p>
+            <p class="sub open-sans">GeForce®</p>
+          </div>
+        </div>
+        <div class="model-opt" id="HD" data-name="INTEL® HD Graphics">
+          <div class="text-container">
+            <p class="title open-sans">INTEL®</p>
+            <p class="sub open-sans">HD Graphics</p>
+          </div>
+        </div>
+        <div class="model-opt" id="Plus" data-name="INTEL® Iris® Plus Graphics">
+          <div class="text-container">
+            <p class="title open-sans">INTEL® Iris®</p>
+            <p class="sub open-sans">Plus Graphics</p>
+          </div>
+        </div>
+        <div class="model-opt" id="Xe" data-name="INTEL® Iris® Xe Graphics">
+          <div class="text-container">
+            <p class="title open-sans">INTEL® Iris®</p>
+            <p class="sub open-sans">Xe Graphics</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="border"></div>
+    <div class="content" id="save">
+      <div class="title-container">
+        <div class="left">
+          <p class="noto-sans">저장장치</p>
+        </div>
+        <div class="right">
+          <p class="open-sans" id="option"></p>
+          <div class="up"></div>
+        </div>
+      </div>
+      <div class="model-list single">
+        <div class="model-opt" id="HDD" data-name="HDD">
+          <div class="text-container">
+            <p class="sub open-sans">HDD</p>
+          </div>
+        </div>
+        <div class="model-opt" id="64GB" data-name="SSD 64GB">
+          <div class="text-container">
+            <p class="sub open-sans">SSD 64GB</p>
+          </div>
+        </div>
+        <div class="model-opt" id="128GB" data-name="SSD 128GB">
+          <div class="text-container">
+            <p class="sub open-sans">SSD 128GB</p>
+          </div>
+        </div>
+        <div class="model-opt" id="256GB" data-name="SSD 256GB">
+          <div class="text-container">
+            <p class="sub open-sans">SSD 256GB</p>
+          </div>
+        </div>
+        <div class="model-opt" id="512GB" data-name="SSD 512GB">
+          <div class="text-container">
+            <p class="sub open-sans">SSD 512GB</p>
+          </div>
+        </div>
+        <div class="model-opt" id="1TB" data-name="SSD 1TB">
+          <div class="text-container">
+            <p class="sub open-sans">SSD 1TB</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="border"></div>
+    <div class="content" id="processor">
+      <div class="title-container">
+        <div class="left">
+          <p class="noto-sans">프로세서</p>
+        </div>
+        <div class="right">
+          <p class="open-sans" id="option"></p>
+          <div class="up"></div>
+        </div>
+      </div>
+      <div class="model-list single">
+        <div class="model-opt" id="pen" data-name="INTEL® 펜티엄">
+          <div class="text-container">
+            <p class="title open-sans">INTEL®</p>
+            <p class="sub open-sans">펜티엄</p>
+          </div>
+        </div>
+        <div class="model-opt" id="sel" data-name="INTEL® 셀러론®">
+          <div class="text-container">
+            <p class="title open-sans">INTEL®</p>
+            <p class="sub open-sans">셀러론®</p>
+          </div>
+        </div>
+        <div class="model-opt" id="core3" data-name="Core™ i3">
+          <div class="text-container">
+            <p class="title open-sans">INTEL®</p>
+            <p class="sub open-sans">Core™ i3</p>
+          </div>
+        </div>
+        <div class="model-opt" id="core5" data-name="Core™ i5">
+          <div class="text-container">
+            <p class="title open-sans">INTEL®</p>
+            <p class="sub open-sans">Core™ i5</p>
+          </div>
+        </div>
+        <div class="model-opt" id="core7" data-name="Core™ i7">
+          <div class="text-container">
+            <p class="title open-sans">INTEL®</p>
+            <p class="sub open-sans">Core™ i7</p>
+          </div>
+        </div>
+        <div class="model-opt" id="ryzen" data-name="AMD Ryzen™">
+          <div class="text-container">
+            <p class="title open-sans">AMD</p>
+            <p class="sub open-sans">Ryzen™</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="border"></div>
+    <div class="content" id="memory">
+      <div class="title-container">
+        <div class="left">
+          <p class="noto-sans">시스템 메모리</p>
+        </div>
+        <div class="right">
+          <p class="open-sans" id="option"></p>
+          <div class="up"></div>
+        </div>
+      </div>
+      <div class="model-list single">
+        <div class="model-opt" id="4GB" data-name="4GB">
+          <div class="text-container">
+            <p class="sub open-sans">4GB</p>
+          </div>
+        </div>
+        <div class="model-opt" id="8GB" data-name="8GB">
+          <div class="text-container">
+            <p class="sub open-sans">8GB</p>
+          </div>
+        </div>
+        <div class="model-opt" id="16GB" data-name="16GB">
+          <div class="text-container">
+            <p class="sub open-sans">16GB</p>
+          </div>
+        </div>
+        <div class="model-opt" id="32GB" data-name="32GB">
+          <div class="text-container">
+            <p class="sub open-sans">32GB</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="border"></div>
+    <div class="content" id="ratio">
+      <div class="title-container">
+        <div class="left">
+          <p class="noto-sans">화면비율</p>
+        </div>
+        <div class="right">
+          <p class="open-sans" id="option"></p>
+          <div class="up"></div>
+        </div>
+      </div>
+      <div class="model-list single">
+        <div class="model-opt" id="nine" data-name="16:9">
+          <div class="text-container">
+            <p class="sub open-sans">16:9</p>
+          </div>
+        </div>
+        <div class="model-opt" id="ten" data-name="16:10">
+          <div class="text-container">
+            <p class="sub open-sans">16:10</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="border"></div>
+    <div class="content" id="delivery">
+      <div class="title-container">
+        <div class="left">
+          <p class="noto-sans">배송</p>
+        </div>
+        <div class="right">
+          <p class="open-sans" id="option"></p>
+          <div class="up"></div>
+        </div>
+      </div>
+      <div class="model-list single">
+        <div class="model-opt" id="today" data-name="오늘출발">
+          <div class="text-container">
+            <p class="sub open-sans">오늘출발</p>
+          </div>
+        </div>
+        <div class="model-opt" id="free" data-name="무료배송">
+          <div class="text-container">
+            <p class="sub open-sans">무료배송</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="border"></div>
+    <div class="content" id="price">
+      <div class="title-container">
+        <div class="left">
+          <p class="noto-sans">가격</p>
+        </div>
+        <div class="right">
+          <p class="open-sans" id="option">890,000원 ~ 1,000,000원</p>
+          <div class="up"></div>
+        </div>
+      </div>
+      <div class="middle">
+        <div class="multi-range-slider">
+          <input type="range" id="input-left" min="0" max="100" value="0">
+          <input type="range" id="input-right" min="0" max="100" value="75">
+
+          <div class="slider">
+            <div class="track"></div>
+            <div class="range"></div>
+            <div class="thumb left"></div>
+            <div class="thumb right"></div>
+          </div>
+        </div>
+      </div>
+      <div class="text">
+        <div class="left">
+          <p class="noto-sans">890,000원</p>
+        </div>
+        <div class="right">
+          <p class="noto-sans">47,000,000원</p>
+        </div>
+      </div>
+    </div>
+    <div class="border"></div>
+    <div class="content" id="search">
+      <div class="title-container">
+        <div class="left">
+          <p class="noto-sans">결과 내 재검색</p>
+        </div>
+        <div class="right">
+          <div class="up"></div>
+        </div>
+      </div>
+      <div class="search">
+        <input type="text" placeholder="검색어를 입력해주세요">
+      </div>
+    </div>
+  </div>
+
+  <div class="down-contents">
+    <div class="filter-container">
+      <div class="filter">
+        <p class="noto-sans">간략 필터 보기</p>
+        <div class="icon"></div>
+      </div>
+      <div class="filter-content"></div>
+    </div>
+    <div class="search-button">
+      <a href="./progress.html">
+        <div class="button-container">
+          <div class="text">
+            검색하기
+          </div>
+        </div>
+    </div>
+    </a>
+  </div>
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="./js/script_renewal.js"></script>
+</body>
+
+</html>

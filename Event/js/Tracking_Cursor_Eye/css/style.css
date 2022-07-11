@@ -1,0 +1,39 @@
+.character{
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background-image: url('../img/test.png');
+  background-size: cover;
+}
+
+body {background-color: black;}
+.positionLeftEye{
+  position: absolute;
+  top: 48%;
+  left: 34%;
+  width: 25px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.positionRightEye{
+  position: absolute;
+  top: 48%;
+  left: 44.5%;
+  width: 25px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.eye{
+  width: 22px;
+  height: 30px;
+  background-color: #444;
+  position: absolute;
+  top: 18%;
+  left: -10%;
+  border-radius: 50%;
+  transition: all 0.5s;
+}

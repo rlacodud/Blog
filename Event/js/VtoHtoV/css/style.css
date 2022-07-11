@@ -1,0 +1,7 @@
+* {box-sizing: border-box;}
+body {transition: 0.3s ease-out; overflow-x: hidden; max-width: 100%; width: 100%; overscroll-behavior: none;}
+section:not(#sectionPin) {background: #000; color: #fff; position: relative; width: 100%; height: 100vh; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); grid-gap: 2rem;}
+.img {background: red; height: 80vh; width: auto; object-fit: cover;}
+#sectionPin {height: 100vh; overflow: hidden; display: flex; left: 0;}
+.pin-wrap {height: 100vh; display: flex; justify-content: flex-start; align-items: center; padding: 50px 10vw;}
+.pin-wrap>* {min-width: 60vw; padding: 0 5vw;}

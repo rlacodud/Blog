@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@font-face {
+  font-family: "DunkelSans-Condensedv";
+	src: url("../fonts/DunkelSans-Condensedv0.7.woff2");
+	src: url("../fonts/DunkelSans-Condensedv0.7.woff2?#iefix") format("embedded-opentype"),
+  url("../fonts/DunkelSans-Condensedv0.7.woff2") format("woff2"); 
+}
+@font-face {
+  font-family: "DunkelSans-Expandedv";
+	src: url("../fonts/DunkelSans-Expandedv0.7.woff2");
+	src: url("../fonts/DunkelSans-Expandedv0.7.woff2?#iefix") format("embedded-opentype"),
+  url("../fonts/DunkelSans-Expandedv0.7.woff2") format("woff2"); 
+}
+@font-face {
+  font-family: "DunkelSans-Glatt-Condensedv";
+	src: url("../fonts/DunkelSans-Glatt-Condensedv0.7.woff2");
+	src: url("../fonts/DunkelSans-Glatt-Condensedv0.7.woff2?#iefix") format("embedded-opentype"),
+  url("../fonts/DunkelSans-Glatt-Condensedv0.7.woff2") format("woff2"); 
+}
+@font-face {
+  font-family: "DunkelSans-Glatt-Mediumv";
+	src: url("../fonts/DunkelSans-Glatt-Mediumv0.7.woff2");
+	src: url("../fonts/DunkelSans-Glatt-Mediumv0.7.woff2?#iefix") format("embedded-opentype"),
+  url("../fonts/DunkelSans-Glatt-Mediumv0.7.woff2") format("woff2"); 
+}
+@font-face {
+  font-family: "DunkelSans-Glattv";
+	src: url("../fonts/DunkelSans-Glattv0.7.woff2");
+	src: url("../fonts/DunkelSans-Glattv0.7.woff2#iefix") format("embedded-opentype"),
+  url("../fonts/DunkelSans-Glattv0.7.woff2") format("woff2"); 
+}
+@font-face {
+  font-family: "DunkelSans-Mediumv";
+	src: url("../fonts/DunkelSans-Mediumv0.7.woff2");
+	src: url("../fonts/DunkelSans-Mediumv0.7.woff2#iefix") format("embedded-opentype"),
+  url("../fonts/DunkelSans-Mediumv0.7.woff2") format("woff2"); 
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: top;
+	box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {content: '';	content: none;}
+table {border-collapse: collapse;	border-spacing: 0;}
+a, a:link {color: black; text-decoration: none;}
+.clear {display: block; clear: both;}
+img {width: 100%;}
+
+html, body, #submit, .cancel {font-family: 'DunkelSans-Expandedv'; width: 100vw; height: 100vh; font-size: 16px;}
+body::-webkit-scrollbar {display: none;}
+
+header {position: absolute; top: 0; left: 0; z-index: 998; width: 100%; height: auto; margin: 0 auto;}
+header .header-container {width: 100%; height: 100%; padding: 40px 40px 0 40px; margin-bottom: 20px; font-size: 0;}
+header .header-container::after {content: ''; display: block; width: 0; height: 0; clear: both;}
+
+header .header-container nav ul li {display: inline-block;}
+header .header-container nav ul li a {display: block; cursor: pointer;}
+header .header-container nav ul li a #send-email {display: block;}
+
+header .header-container nav ul li h3 {display: inline-block; width: 32px; height: 32px; background-position: center; background-size: cover; font-size: 0;}
+
+.dim {position: absolute; top: 0; bottom: 0; width: 100vw; height: 101vh; background: black; opacity: 70%; display: none; transition: all ease-in-out 0.3s;}
+.dim.on {display: block;}
+
+.send-box {position: absolute; top: 0; right: -100%; display: inline-block; z-index: 1000; height: 100vh; background-color: black; color: white; transition: all ease-in-out 0.5s;}
+.send-box.on {right: 0; }
+
+.send-box .input-box .content {padding: 30px;}
+.send-box .input-box .content h3 {margin-bottom: 15px;}
+.send-box .input-box .border {display: block; width: 100%; border-bottom: 1px solid white; margin-bottom: 40px;}
+
+.send-box .input-box #email, #tell, #message {box-sizing: border-box; width: 100%; margin: 6px 0 40px 0; padding: 10px; border-radius: 5px; border: 1px solid white; background-color: transparent; color: white;}
+.send-box .input-box #message {resize: none; height: 200px;}
+
+.send-box .input-box .bottom-btn {position: absolute; bottom: 0; width: 100%; font-size: 0;}
+.send-box .input-box .bottom-btn #submit,
+.send-box .input-box .bottom-btn .cancel {width: 50%; height: 100px; padding: 20px 10px; border: none; border-radius: 10px; font-weight: bold; font-size: 30px; cursor: pointer; transition: all ease-in-out 0.3s;}
+.send-box .input-box .bottom-btn #submit {background-color: #ed4f43;}
+.send-box .input-box .bottom-btn #submit:hover {background-color: white; color: black;}
+.send-box .input-box .bottom-btn .cancel {background-color: white; color: black;}
+
+@media (max-width: 767px) {
+  .send-box {right: -400%;}
+}
+
+/* IPAD PRO */
+@media (max-width: 1024px) {
+  .send-box {right: -400%;}
+}
+
+/* IPAD */
+@media (max-width: 768px) {
+  .send-box {right: -400%;}
+}
+
+/* IPHONE 6/7/8 PLUS */
+@media (max-width: 414px) {
+  .send-box {right: -400%;}
+}
+
+/* IPHONE 6/7/8 */
+@media (max-width: 375px) {
+  .send-box {right: -400%;}
+}
+
+/* IPHONE 5/SE */
+@media (max-width: 320px) {
+  .send-box {right: -400%;}
+}

@@ -1,0 +1,5 @@
+h2 {font-size: calc(100vw*60/1920); font-weight: bold;}
+.stroke {color: transparent; -webkit-text-fill-color: transparent; -webkit-text-stroke-width: 1px; -webkit-text-stroke-color: #222;}
+.fill {position: absolute; top: 0; left: 9.6%; clip: rect(0px, 0px, 167px, 0px); transition: all ease-in-out 0.3s;}
+
+h2:hover .fill {clip: rect(0px, 475px, 167px, 0px);}

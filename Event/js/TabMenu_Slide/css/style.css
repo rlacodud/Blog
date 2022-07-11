@@ -1,0 +1,41 @@
+html {overflow:hidden;}
+
+#sectionOne {position: relative; width: 100vw; height: 100vh; background-color: #212121; font-size: 0;}
+#sectionOne .backgroundPeople {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: calc(100vw * 367 / 1920); height: calc(100vw * 602 / 1920); background-image: url('../img/backgroundPeople1.png'); background-repeat: no-repeat; background-size: cover;}
+#sectionOne .backgroundPeople.on {width: calc(100vw * 367 / 1920); height: calc(100vw * 602 / 1920); background-image: url('../img/backgroundPeople2.png');}
+#sectionOne .tab-menu {display: inline-block; width: calc(20% - 274); height: 100%; padding-top: calc(100vw * 193 / 1920); padding-left: calc(100vw * 274 / 1920);}
+#sectionOne .tab-menu .title {font-size: calc(100vw * 20 / 1920); font-weight: bold; color: #fff;}
+#sectionOne .tab-menu ul {margin-top: calc(100vw * 68 / 1920);}
+#sectionOne .tab-menu li {display: block;}
+#sectionOne .tab-menu li:first-child {margin-bottom: calc(100vw * 31/ 1920);}
+#sectionOne .tab-menu li a {position:relative; z-index: 100; display:inline-block; color:rgba(255, 255, 255, 0.3); font-weight:bold; font-size: calc(100vw * 40 / 1920); cursor: pointer;}
+#sectionOne .tab-menu li a span {display:inline-block; position:relative; vertical-align:top; cursor: pointer;}
+#sectionOne .tab-menu li a span::after {content:""; display:block; position:absolute; z-index: -1; bottom:0; left:0; width:0; height:calc(100vw * 20 / 1920); background-color: #ED1B94; opacity: 0; transition: all ease-in-out 0.3s;}
+#sectionOne .tab-menu li a.selected {color:#fff; cursor: pointer;}
+
+#sectionOne .tab-menu ul li a:hover #sectionOne .tab-menu ul li a span::after,
+#sectionOne .tab-menu ul li a.selected span::after {opacity: 1; width: 104%;}
+.tab-menu li a.selected span::before {border-bottom-color:#fff;}
+.tab-menu + .tab-container {margin-top:20px;}
+
+#sectionOne .tab-container {position: relative; display: inline-block; width: calc(80% - 274px); height: 100%;}
+#sectionOne .tab-container .tab-content {display:none; position:relative;}
+#sectionOne .tab-container .tab-content.selected {display:block;}
+#sectionOne .tab-container .tab-content .emojiListContainer .emojiList {position: relative; width: 100%; height: 100%;}
+
+#job .active {position: absolute; top: 0; left: 0; transform: translate(131%, 26%); display: inline-block; width: calc(100vw * 289 / 1920); height: calc(100vw * 360 / 1920);}
+#job .second {position: absolute; top: 0; left: 0; transform: translate(220%, 104%); display: inline-block; width: calc(100vw * 348 / 1920); height: calc(100vw * 270 / 1920);}
+#job .third {position: absolute; top: 0; left: 0; transform: translate(1109%, 460%); display: inline-block; width: calc(100vw * 108 / 1920); height: calc(100vw * 135 / 1920);}
+#commissioner .active {position: absolute; top: 0; left: 0; transform: translate(100%, 21%);width: calc(100vw * 346 / 1920); height: calc(100vw * 384 / 1920);}
+#commissioner .second {position: absolute; top: 0; left: 0; transform: translate(393%, 120%); width: calc(100vw * 220 / 1920); height: calc(100vw * 267 / 1920);}
+#commissioner .third {position: absolute; top: 0; left: 0; transform: translate(1036%, 440%); width: calc(100vw * 116 / 1920); height: calc(100vw * 143 / 1920);}
+
+#sectionOne .tab-container .tab-content .emojiListContainer .emojiList li img {width: 100%; height: 100%;}
+.speechBubble {position: absolute; top: 22%; left: -96%; width: calc(100vw * 239 / 1920); height: calc(100vw * 136 / 1920); background-image: url('../img/speach.png'); vertical-align: middle; background-repeat: no-repeat; background-size: cover;}
+.speechBubble h6 {position: absolute; top: 41%; left: 50%; width: 100%; transform: translate(-50%, -50%); text-align: center; margin: 0 auto; font-size: calc(100vw * 23 / 1920); font-weight: bold;}
+.textBox {position: absolute; bottom: -70%; left: 50%; transform: translateX(-50%); width: 100%; text-align: center;}
+#sectionOne .tab-container .tab-content .emojiListContainer .emojiList .second .textBox {bottom: -28%;}
+#sectionOne .tab-container .tab-content .emojiListContainer .emojiList .third .textBox {bottom: -33%;}
+.textBox .team {display: inline-block; width: auto; padding: calc(100vw * 14 / 1920) calc(100vw * 23 / 1920); text-align: center; background-color: #666666; border-radius: calc(100vw * 60 / 1920); color: #fff; font-size: calc(100vw * 20 / 1920); font-weight: bold;}
+.textBox .name {font-size: calc(100vw * 40 / 1920); font-weight: bold; color: #fff;}
+#sectionOne .tab-container .tab-content .emojiListContainer .emojiList .active .textBox .team {background-color: #ED1B94; margin-bottom: calc(100vw * 20 / 1920);}

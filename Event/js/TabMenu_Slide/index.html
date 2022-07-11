@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tabMenu_Slide</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <section id="sectionOne">
+    <div class="backgroundPeople"></div>
+    <div id="tab-menu" class="tab-menu">
+      <h2 class="title">INTERVIEW</h2>
+      <ul>
+        <li>
+          <a href="#" class="selected">
+            <span>직무소개</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span>면접위원</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="tab-container">
+      <div class="tab-content selected" id="job">
+        <div class="emojiListContainer">
+          <ul class="emojiList">
+            <li class="active">
+              <img src="./img/emoji1.png">
+              <div class="speechBubble">
+                <h6>최고의 경험을 <br>
+                  선사하는 그 날까지</h6>
+              </div>
+              <div class="textBox">
+                <h5 class="team">LG서비스인스사이트팀</h5>
+                <h4 class="name">박미령 선임</h4>
+              </div>
+            </li>
+            <li class="second">
+              <img src="./img/emoji2.png">
+              <div class="textBox">
+                <h5 class="team">LG서비스인스사이트팀</h5>
+              </div>
+            </li>
+            <li class="third">
+              <img src="./img/emoji3.png">
+              <div class="textBox">
+                <h5 class="team">홍보팀</h5>
+              </div>
+            </li>
+        </div>
+      </div>
+      <div class="tab-content" id="commissioner">
+        <div class="emojiListContainer">
+          <ul class="emojiList">
+            <li class="active">
+              <img src="./img/emoji4.png">
+              <div class="speechBubble">
+                <h6>최고의 경험을 <br>
+                  선사하는 그 날까지</h6>
+              </div>
+              <div class="textBox">
+                <h5 class="team">LG화학 전지재료 기획팀</h5>
+                <h4 class="name">김우성 팀장</h4>
+              </div>
+            </li>
+            <li class="second">
+              <img src="./img/emoji5.png">
+              <div class="textBox">
+                <h5 class="team">홍보팀</h5>
+              </div>
+            </li>
+            <li class="third">
+              <img src="./img/emoji6.png">
+              <div class="textBox">
+                <h5 class="team">홍보팀</h5>
+              </div>
+            </li>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+</html>

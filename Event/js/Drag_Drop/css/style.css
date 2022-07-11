@@ -1,0 +1,9 @@
+section {width: 100vw; height: 100vh;}
+.box-container {width: 100%; height: 100%; font-size: 0;}
+.box-container .box {display: inline-block; width: 33.3333%; height: 100%; box-sizing: border-box; cursor: pointer; user-select: none; text-align: center;}
+.box-container .censorship-box {position: absolute; text-align: center; background-color: #000;}
+.box-container .censorship-box a {display: inline-block;}
+.box-container #one .censorship-box:first-child,
+.box-container #two .censorship-box:first-child,
+.box-container #three .censorship-box:first-child {z-index: 999; padding: 11%; margin: 10%; color: transparent; background-position: center; background-repeat: no-repeat; background-size: cover;}
+.censorship-box:active, .main .censorship-box:focus {cursor: move; cursor: grab;}

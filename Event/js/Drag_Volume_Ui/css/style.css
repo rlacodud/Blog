@@ -1,0 +1,6 @@
+.circle {border-radius: 50%; background: #ff4c4c; width: 12px; height: 12px; position: absolute; z-index: 3; top: 9.5px; left: 5px; transition: left 0.5s ease-out;}
+.box {width: 200px; height: 30px; border: 1px solid black; position: relative; transition: all 0.1s;}
+.line {height: 1px; width: 180px; background: linear-gradient(to right, #ff4c4c, #b690ff); position: absolute; top: 15px; left: 10px;}
+.left-box {width: 50%; height: 30px; float: left; position: relative; z-index: 5;}
+.right-box {width: 50%; height: 30px; float: right; position: relative; z-index: 5;}
+.box-vol {float: right;}

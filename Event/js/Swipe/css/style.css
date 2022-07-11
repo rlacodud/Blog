@@ -1,0 +1,6 @@
+section {width: 100vw; height: 100vh; position: relative;}
+#sectionFour {background-image: url('../img/fourBack.png'); background-repeat: no-repeat; background-size: cover;}
+#sectionFour .imageSliderContainer {position: absolute; top: 50%; right: 0; transform: translateY(-50%); width: calc(100vw * 1692 / 1920); height: calc(100vw * 445 / 1920); overflow-x: auto; font-size: 0; display: flex;}
+#sectionFour .imageSliderContainer::-webkit-scrollbar {display: none;}
+#sectionFour .imageSliderContainer .slide {flex: 1; position: relative; margin-right: calc(100vw * 80 / 1920); min-width: calc(100vw * 830 / 1920);}
+#sectionFour .imageSliderContainer .slide .img {width: calc(100vw * 835 / 1920); height: calc(100vw * 445 / 1920); background: black; background-position: center; background-repeat: no-repeat; background-size: cover;}

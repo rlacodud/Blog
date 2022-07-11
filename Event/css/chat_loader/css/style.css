@@ -1,0 +1,129 @@
+.hero__illustration {
+  max-width: 31.25rem;
+	margin: auto;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+  font-size: 16px;
+}
+.chat__row {
+	position: relative;
+	padding-top: 0.3215rem;
+	padding-bottom: 0.3215rem;
+}
+.chat__message {
+	display: flex;
+  justify-content: flex-start;
+}
+.chat-message--loader {
+	position: absolute;
+	top: 50%;
+  opacity: 0;
+	transform: translate(50%);
+	transform: translateY(-50%);
+}
+.chat-message__content {
+	position: relative;
+	max-width: 45%;
+	padding: .75rem 1.25rem;
+	font-size: 1.25rem;
+	line-height: 1;
+  text-align: left;
+  color: #343A40;
+	border-radius: 100px;
+  background: #F1F3F5;
+  z-index: 0;
+}
+@keyframes message1 {
+	0% {
+		opacity: 0;
+		transform: translateY(50%);
+	}
+
+	10% {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+
+	20%,
+	100% {
+		opacity: 0;
+		transform: translateY(-50%);
+	}
+}
+#message-1 {
+  animation-fill-mode: forwards;
+	animation-name: message1;
+	animation-duration: 9s;
+}
+@keyframes message2 {
+	0%,
+	10% {
+		opacity: 0;
+		transform: translateY(50%);
+	}
+	20%,
+	100% {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+}
+#message-2 {
+	animation-fill-mode: forwards;
+	animation-name: message2;
+	animation-duration: 9s;
+}
+#message-7 .chat-message__content {
+  width: 40px;
+}
+:root {
+	--loader-size: 0.625rem;
+	--loader-spacing: 0.3125rem;
+	--loader-background: rgba(0, 0, 0, .1);
+	--loader-background-active: rgba(0, 0, 0, .3); /*#ADB5BD;*/
+	--loader-animation-duration: 0.8s;
+}
+.loader {
+	position: relative;
+	margin-left: calc(var(--loader-spacing) + var(--loader-size));
+	margin-right: calc(var(--loader-spacing) + var(--loader-size));
+	animation-delay: calc(var(--loader-animation-duration) / 3);
+}
+.loader,
+.loader::before,
+.loader::after {
+	display: inline-block;
+	width: var(--loader-size);
+	height: var(--loader-size);
+	background: var(--loader-background);
+	border-radius: 100%;
+	animation-name: loader;
+	animation-duration: var(--loader-animation-duration);
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+.loader::before,
+.loader::after {
+	content: '';
+	position: absolute;
+	top: 0;
+}
+.loader::before {
+	left: calc((var(--loader-spacing) + var(--loader-size)) * -1);
+}
+.loader::after {
+	right: calc((var(--loader-spacing) + var(--loader-size)) * -1);
+	animation-delay: calc(var(--loader-animation-duration) / 3 * 2);
+}
+@keyframes loader {
+	0%,
+	66%,
+	100% {
+		transform: translateY(10%);
+		background: var(--loader-background);
+	}
+
+	33% {
+		transform: translateY(-25%);
+		background: var(--loader-background-active);
+	}
+}

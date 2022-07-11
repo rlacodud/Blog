@@ -1,0 +1,7 @@
+.dropup {position: relative; display: inline-block; margin-top: calc(100vw * 200 / 1920);}
+.dropup .dropbtn {background-color: #000; color: #fff; padding: calc(100vw * 16 / 1920) calc(100vw * 25 / 1920); font-size: calc(100vw * 16 / 1920); border: none;}
+.dropup .dropup-content {display: none; position: absolute; bottom: calc(100vw * 50 / 1920); background-color: #f1f1f1; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1;}
+.dropup .dropup-content a {color: #000; padding: calc(100vw * 12 / 1920) calc(100vw * 16 / 1920); text-decoration: none; display: block;}
+.dropup .dropup-content a:hover {background-color: #ddd}
+.dropup:hover .dropup-content {display: block;}
+.dropup:hover .dropbtn {background-color: royalblue;}

@@ -1,0 +1,30 @@
+/* sections */
+.section1 {
+    background-color: blue;
+    width: 100vw;
+    height: 100vh;
+}
+.section2 {
+    position: relative;
+    background-color: green;
+    width: 100vw;
+    height: 3000px;
+}
+.section3 {
+    background-color: yellow;
+    width: 100vw;
+    height: 100vh;
+}
+.fixedImg {
+    width: 1000px;
+}
+.fixedImg.active {
+    position: fixed;
+    top: 0;
+}
+.fixedImg.active.finish {
+    position: absolute; top: auto; bottom: 0;
+}
+/* .fixedImg.active.finish.reActive {
+    position: fixed; top: 0; bottom: auto;
+} */

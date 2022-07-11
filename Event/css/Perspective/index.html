@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perspective</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="perspective-text">
+    <!-- overflow: hidden인 perspective-line 묶음 -->
+    <div class="perspective-line">
+      <!-- 현재 텍스트와 다음 텍스트로 구성되어 -->
+      <!-- 한번에 움직이며 perspective-line의 영역 내로 들어갔다 나갔다 함으로써 움직이는 것 같은 트릭을 주는 것임 -->
+      <p></p>
+      <p>Reality</p>
+    </div>
+    <div class="perspective-line">
+      <p>Reality</p>
+      <p>Is Only</p>
+    </div>
+    <div class="perspective-line">
+      <p>Is Only</p>
+      <p>A Matter Of</p>
+    </div>
+    <div class="perspective-line">
+      <p>A Matter Of</p>
+      <p>Perception</p>
+    </div>
+    <div class="perspective-line">
+      <p>Perception</p>
+      <p></p>
+    </div>
+  </div>
+</body>
+</html>

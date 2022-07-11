@@ -1,0 +1,6 @@
+body {width: 100vw; height: 100vh;}
+body::-webkit-scrollbar {display: none;}
+
+.container {background: #000; width: 100vw; height: 100vh; overflow: hidden; position: relative;}
+.mainConainer {position: absolute; z-index: 9;}
+.main {position: relative; top: 0; left: 0; padding: 10px; cursor: move; z-index: 10; width: 140vw; height: 140vh; background-color: gold;}

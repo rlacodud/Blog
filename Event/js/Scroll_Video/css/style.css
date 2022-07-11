@@ -1,0 +1,25 @@
+html {scroll-behavior: smooth;}
+body {margin: 0; touch-action: pan-y; height: 100vh; overflow: auto;}
+body::-webkit-scrollbar {display: none;}
+
+section {width: 100vw; height: 100vh;}
+#section1 {height: calc(100vw *6000/1920);}
+#video {position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; object-position: center center;}
+#section1.off,
+#video.off {z-index: -1;}
+
+#section2 {width: 100vw; height: auto; background: transparent; color: #000;}
+#section2.on {position: relative;}
+#section2 .imageContainer {position: relative; width: 100%; padding: 0 calc(100vw*60/1920);}
+#section2 .imageContainer .imgContents {position: relative; width: 100%; margin-top: 75vh; display: flex;}
+#section2 .imageContainer .imgContents:nth-child(1) {justify-content: center;}
+#section2 .imageContainer .imgContents:nth-child(2) {justify-content: flex-end;}
+#section2 .imageContainer .imgContents:nth-child(3) {justify-content: flex-start;}
+#section2 .imageContainer .imgContents:nth-child(4) {justify-content: flex-end;}
+#section2 .imageContainer .imgContents .image {width: calc(100vw*415/720); height: calc(100vw*311/720);}
+#section2 .imageContainer .imgContents:nth-child(1) .image {background-color: #000;}
+#section2 .imageContainer .imgContents:nth-child(2) .image {background-color: cadetblue;}
+#section2 .imageContainer .imgContents:nth-child(3) .image {background-color: indianred;}
+#section2 .imageContainer .imgContents:nth-child(4) .image {background-color: antiquewhite;}
+
+#section3 {background: #fff;}
