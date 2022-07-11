@@ -1,0 +1,5 @@
+html, body {height: 100%;}
+body {background-color: #000; color: #FFF; margin: 0;}
+.flex-column {display: flex; flex-direction: column;}
+.center-center {display: flex; justify-content: center; align-items: center;}
+.square {width: 90px; height: 90px; margin: 30px; background-color: #7E57C2; transition: transform 300ms ease-out;}

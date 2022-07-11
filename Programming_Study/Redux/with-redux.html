@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>with redux</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.2.0/redux.min.js" integrity="sha512-1/8Tj23BRrWnKZXeBruk6wTnsMJbi/lJsk9bsRgVwb6j5q39n0A00gFjbCTaDo5l5XrPVv4DZXftrJExhRF/Ug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+  <style>
+    .container {border: 5px solid black; padding: 10px;}
+  </style>
+
+  <div id="red"></div>
+  <div id="green"></div>
+  <div id="blue"></div>
+
+  <script>
+    // 인자로 state(현재 상태값)와 action(이후 변경값)을 받아옴
+    function reducer(state, action){
+      console.log(state, action);
+      if(state === undefined) {
+        // 초기값
+        return {color: 'yellow'}
+      }
+      var newState;
+      if(action.type === 'CHANGE_COLOR') {
+        newState = Object.assign({}, state, {color:action.color});
+      }
+      console.log(action.type, action, state, newState)
+      return newState;
+    }
+    // store 생성하여 reducer 등록
+    var store = Redux.createStore(
+      reducer,
+      window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()    
+    );
+
+    function red() {
+      // getState를 통해 store의 state를 가져옴
+      var state = store.getState();
+      document.querySelector('#red').innerHTML = `
+        <div class="container" id="component_red" style="background-color:${state.color}">
+            <h1>red</h1>
+            <input type="button" value="fire" onclick="
+              store.dispatch({type:'CHANGE_COLOR', color: 'red'});
+            ">
+        </div>
+    `;
+    }
+    // state값이 변경될 때마다 red를 호출
+    store.subscribe(red);
+    red();
+
+    function green() {
+      // getState를 통해 store의 state를 가져옴
+      var state = store.getState();
+      document.querySelector('#green').innerHTML = `
+        <div class="container" id="component_green" style="background-color:${state.color}">
+            <h1>green</h1>
+            <input type="button" value="fire" onclick="
+              store.dispatch({type:'CHANGE_COLOR', color: 'green'});
+            ">
+        </div>
+    `;
+    }
+    // state값이 변경될 때마다 green를 호출
+    store.subscribe(green);
+    green();
+
+    function blue() {
+      // getState를 통해 store의 state를 가져옴
+      var state = store.getState();
+      document.querySelector('#blue').innerHTML = `
+        <div class="container" id="component_blue" style="background-color:${state.color}">
+            <h1>blue</h1>
+            <input type="button" value="fire" onclick="
+              store.dispatch({type:'CHANGE_COLOR', color: 'blue'});
+            ">
+        </div>
+    `;
+    }
+    // state값이 변경될 때마다 blue를 호출
+    store.subscribe(blue);
+    blue();
+  </script>
+</body>
+</html>

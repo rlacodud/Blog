@@ -1,0 +1,42 @@
+package user;
+
+public class User {
+
+	private string userID;
+	private string userPassword;
+	private string userName;
+	private string userGender;
+	private string userEmail;
+	public string getUserID() {
+		return userID;
+	}
+	public void setUserID(string userID) {
+		this.userID = userID;
+	}
+	public string getUserPassword() {
+		return userPassword;
+	}
+	public void setUserPassword(string userPassword) {
+		this.userPassword = userPassword;
+	}
+	public string getUserName() {
+		return userName;
+	}
+	public void setUserName(string userName) {
+		this.userName = userName;
+	}
+	public string getUserGender() {
+		return userGender;
+	}
+	public void setUserGender(string userGender) {
+		this.userGender = userGender;
+	}
+	public string getUserEmail() {
+		return userEmail;
+	}
+	public void setUserEmail(string userEmail) {
+		this.userEmail = userEmail;
+	}
+	
+	
+}

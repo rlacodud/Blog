@@ -1,0 +1,68 @@
+body, html {font-family: 'pretendardBold';}
+html {max-width: 720px; overflow-x: hidden;}
+body {width: 100vw;}
+body::-webkit-scrollbar {display: none;}
+
+.section1 {position: relative; width: 100vw; text-align: center; margin-top: 180px;}
+.section1 .sec1Top{height: calc(100vw*300/720); width: 100%; overflow:hidden;}
+.section1 .sec1Top .text{color: black; font-size: calc(100vw*120/720); font-weight: bold; position: fixed; width: 100%;}
+.section1 .backText{width: 100%; color: #fff; font-size: calc(100vw*120/720); font-weight: bold; z-index: 5;position: absolute; top: 0; margin-top: calc(100vw*-300/720);}
+.section1 .sec1Img{width: 100%; height: calc(100vw*1520/720); background-color: black; overflow: hidden; position: relative;}
+.section1 .sec1Img img{width: 100%; position: relative;}
+
+#section2 {position: relative; width: 100vw; height: calc(100vw*1520/720); background-image: url('../img/section2.png'); background-size: cover; background-position: center; object-fit: cover;}
+#section2 .textContainer {position: absolute; width: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;}
+#section2 .textContainer p {color: #fff; opacity: 0.5; font-size: calc(100vw*60/720); font-weight: bold; line-height: calc(100vw*80/720); margin-bottom: calc(100vw*30/720);}
+#section2 .textContainer p:last-child {margin: 0;}
+#section2 .textContainer p.on {opacity: 1;}
+
+#section3 {position: relative; z-index: 2; width: 100vw; height: calc(100vw*2600/720); background-color: #1C1C1C; transition: all ease-in-out 0.3s;}
+#section3 .textContainer {padding-top: calc(100vw*150/720); padding-bottom: calc(100vw*110/720); text-align: center; margin: 0 auto;}
+#section3 .textContainer .subTitle {font-size: calc(100vw*30/720); font-weight: bolder; color: #fff; margin-bottom: calc(100vw*40/720);}
+#section3 .textContainer .title {font-size: calc(100vw*60/720); font-weight: bolder; color: #fff; line-height: calc(100vw*72/720);}
+#section3 .image {text-align: center; margin: 0 auto; width: calc(100vw*667/720); height: calc(100vw*338/720); background-image: url('../img/section3Tv.png'); background-position: center; background-repeat: no-repeat; background-size: cover;}
+#section3 .iconListContainer {text-align: center; margin: 0 auto; margin-top: calc(100vw*61/720);}
+#section3 .iconListContainer .iconList .icon {margin-bottom: calc(100vw*120/720); opacity: 0.5;}
+#section3 .iconListContainer .iconList .icon:nth-child(1).iconOn,
+#section3 .iconListContainer .iconList .icon:nth-child(2).iconOn,
+#section3 .iconListContainer .iconList .icon:nth-child(3).iconOn,
+#section3 .iconListContainer .iconList .icon:nth-child(4).iconOn {opacity: 1;}
+#section3 .iconListContainer .iconList .icon .iconImg {text-align: center; margin: 0 auto; background-position: center; background-repeat: no-repeat; background-size: cover; margin-bottom: calc(100vw*31/720); transition: all ease-in-out 0.3s;}
+#section3 .iconListContainer .iconList .icon .text .subTitle {margin-bottom: calc(100vw*20/720); font-size: calc(100vw*20/720); font-weight: bold; line-height: calc(100vw*80/720); color: #fff;}
+#section3 .iconListContainer .iconList .icon .text .title {font-size: calc(100vw*54/720); line-height: calc(100vw*80/720); color: #fff; text-align: center;}
+#section3 .iconListContainer .iconList .icon:nth-child(1) .iconImg {background-image: url('../img/section3_icon1.png'); width: calc(100vw*83/720); height: calc(100vw*79/720); transform: rotateY(90deg);}
+#section3 .iconListContainer .iconList .icon:nth-child(1) .iconImg.on,
+#section3 .iconListContainer .iconList .icon:nth-child(2) .iconImg.on,
+#section3 .iconListContainer .iconList .icon:nth-child(3) .iconImg.on,
+#section3 .iconListContainer .iconList .icon:nth-child(4) .iconImg.on {transform: translate(0, 0);}
+#section3 .iconListContainer .iconList .icon:nth-child(2) .iconImg {background-image: url('../img/section3_icon2.png'); width: calc(100vw*70/720); height: calc(100vw*70/720); transform: rotateY(90deg);}
+#section3 .iconListContainer .iconList .icon:nth-child(3) .iconImg {background-image: url('../img/section3_icon3.png'); width: calc(100vw*74/720); height: calc(100vw*74/720); transform: rotateY(90deg);}
+#section3 .iconListContainer .iconList .icon:nth-child(4) .iconImg {background-image: url('../img/section3_icon4.png'); width: calc(100vw*80/720); height: calc(100vw*65/720); transform: rotateY(90deg);}
+#section3 .iconListContainer .iconList .icon:last-child {margin: 0;}
+
+#section4 {position: relative; z-index: auto; width: 100vw; height: 100vh; background-color: #fff;}
+#section4.on {position: fixed; top: 0; z-index: 200;}
+#section4 .contentsContainer {inset: 0px auto auto 0px; margin: 0px; max-width: 720px; width: 720px; max-height: calc(100vw*1242/720); height: calc(100vw*1242/720); padding: 0px;}
+#section4 .imageContents {transform: translate(0, 0); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('../img/section1.png'); background-position: center; background-repeat: no-repeat; transition: all ease-in-out 0.3s;}
+#section4 .text {position: absolute; top: 50%; left: 50%; width: 100%; transform: translate(-50%, -50%);}
+#section4 .text h2 {font-size: calc(100vw*120/720); font-weight: bold; line-height: calc(100vw*98/720); color: #fff; text-align: center;}
+#section4 .contentsContainer.on {transform: translate(0%, -100%); left: 0px; top: calc(100vw*1242.31/720); margin: 0px; max-width: 720px; width: 720px; max-height: calc(100vw*1242/720); height: calc(100vw*1242/720); padding: 0px; border: 2px solid red; box-sizing: border-box; position: fixed; z-index: auto;}
+
+#section5 {position: relative; width: 100vw; height: 100vh; background-color: #000; transition: all ease-in-out 0.3s;}
+#section5.on {position: fixed; top: 0; z-index: 200;}
+#section5 .imgContents {margin: 0 auto; text-align: center;}
+#section5 .imgContents img {object-fit: cover; height: 100vh; transition: all ease-in-out 0.3s;}
+#section5 .text {width: 100%; text-align: center; position: absolute; top: 50vh; transform: translate(0, -50%); transition: all ease-in-out 0.3s;}
+#section5 .text .title {color: #fff; font-size: calc(100vw*140/720); font-weight: bolder; line-height: calc(100vw*220/720); margin-bottom: calc(100vw*56/720); transition: all ease-in-out 0.3s;}
+#section5 .text .contents {color: #fff; font-size: calc(100vw*40/720); font-weight: bold; line-height: calc(100vw*60/720); transition: all ease-in-out 0.3s;}
+#section5 .downText {width: 100%; margin: 0 auto; padding-top: calc(100vw*110/720); margin-left: calc(100vw*50/720); margin-bottom: calc(100vw*33/720);}
+#section5 .downText .subTitle {color: #CCCCCC; font-size: calc(100vw*28/720); line-height: calc(100vw*40/720); font-weight: bold; margin-bottom: calc(100vw*20/720);}
+#section5 .downText .title {color: #fff; font-size: calc(100vw*64/720); line-height: calc(100vw*80/720); font-weight: bold; margin-bottom: calc(100vw*45/720);}
+#section5 .downText h6 {color: #999999; font-size: calc(100vw*28/720); line-height: calc(100vw*40/720); font-weight: bold;}
+
+#section6 {position: relative; width: 100vw; height: calc(100vw*1520/720); background-image: url('../img/section6.png'); background-position: center; background-repeat: no-repeat; background-size: cover; transition: all ease-in-out 0.3s;}
+#section6.on {position: fixed; top: 0;}
+#section6 .textContainer {padding-top: calc(100vw*654/720); margin-left: calc(100vw*56/720);}
+#section6 .textContainer .subTitle {color: #CCCCCC; font-size: calc(100vw*28/720); font-weight: bold; line-height: calc(100vw*40/720); margin-bottom: calc(100vw*24/720);}
+#section6 .textContainer .title {color: #fff; font-size: calc(100vw*64/720); font-weight: bold; line-height: calc(100vw*80/720); margin-bottom: calc(100vw*56/720);}
+#section6 .textContainer h6 {color: #D1CBD2; font-size: calc(100vw*28/720); font-weight: bold; line-height: calc(100vw*42/720);}

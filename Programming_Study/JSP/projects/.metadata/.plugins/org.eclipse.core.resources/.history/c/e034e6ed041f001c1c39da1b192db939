@@ -1,0 +1,12 @@
+package bbs;
+
+public class Bbs {
+	
+	private int bbsID;
+	private String bbsTitle;
+	private String userID;
+	private String bbsDtae;
+	private String bbsContent
+	private int bbsAvailable;
+	
+}

@@ -1,0 +1,3 @@
+﻿  예제9-6.c
+D:\studyC\9-6\예제9-6.c(9,8): warning C4133: '=': 'int *'과(와) 'double *' 사이의 형식이 호환되지 않습니다.
+  9-6.vcxproj -> D:\studyC\9-6\Debug\9-6.exe

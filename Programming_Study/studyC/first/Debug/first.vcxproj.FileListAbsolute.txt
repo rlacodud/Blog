@@ -1,0 +1,2 @@
+D:\studyC\first\Debug\first.exe
+D:\studyC\first\Debug\first.pdb

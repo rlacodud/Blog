@@ -1,0 +1,4 @@
+﻿  예제3-9.c
+D:\studyC\3-9\예제3-9.c(1,1): warning C4005: '_CRT_SECURE_NO_WARNINGS': 매크로 재정의
+D:\studyC\3-9\예제3-9.c : message : '_CRT_SECURE_NO_WARNINGS'의 이전 정의를 참조하십시오.
+  3-9.vcxproj -> D:\studyC\3-9\Debug\3-9.exe

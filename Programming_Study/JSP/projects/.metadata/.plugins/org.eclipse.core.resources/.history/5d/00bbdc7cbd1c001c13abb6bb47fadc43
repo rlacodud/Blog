@@ -1,0 +1,19 @@
+package user;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+public class UserDAO {
+	private Connection conn;
+	private PreparedStatement pstat;
+	private ResultSet rs;
+	
+	public UserDAO() {
+		try {
+			String dbURL = "jdbc:mysql://localhost:3306/BBS";
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

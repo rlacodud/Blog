@@ -1,0 +1,9 @@
+html, body {max-width: 720px; margin: 0 auto;}
+body::-webkit-scrollbar {display: none;}
+
+.container {max-height: 568px; overflow-y: scroll;}
+section {max-height: 520px;}
+.emoji {margin: 40px 0; text-align: center;}
+#section1 .contents {margin: 0 auto; width: 291px; height: 426px; background-image: url('../img/contents1.png'); background-position: center; background-repeat: no-repeat; background-size: cover; object-fit: cover; margin-bottom: 40px;}
+#section2 .contents {margin: 0 auto; width: 291px; height: 426px; background-image: url('../img/contents2.png'); background-position: center; background-repeat: no-repeat; background-size: cover; object-fit: cover; margin-bottom: 40px;}
+#section3 .contents {margin: 0 auto; width: 291px; height: 426px; background-image: url('../img/contents3.png'); background-position: center; background-repeat: no-repeat; background-size: cover; object-fit: cover; margin-bottom: 40px;}

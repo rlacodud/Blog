@@ -1,0 +1,3 @@
+﻿  예제15-8.c
+예제15-8.obj : error LNK2019: _mul_main 함수에서 참조되는 확인할 수 없는 외부 기호
+D:\studyC\15-8\Debug\15-8.exe : fatal error LNK1120: 1개의 확인할 수 없는 외부 참조입니다.

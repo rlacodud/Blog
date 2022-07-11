@@ -1,0 +1,6 @@
+* {box-sizing: border-box;}
+html, body {height: 100%;}
+body {background-color: #000; margin: 0;}
+.center-center {display: flex; justify-content: center; align-items: center;}
+.square {width: 90px; height: 90px; background-color: #FF3D00; transition: transform 300ms ease-out;}
+.expand {transform: scale(2.5);}
