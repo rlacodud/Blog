@@ -1,20 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
-/* @font-face {
-	font-family: "NeueHaasDisplayLight";
-	src: url("/fonts/NeueHaasDisplay/NeueHaasDisplayLight.woff2");
-	src: url("/fonts/NeueHaasDisplay/NeueHaasDisplayLight.woff2?#iefix") format("embedded-opentype"),
-	  	 url("/fonts/NeueHaasDisplay/NeueHaasDisplayLight.woff2") format("woff2");
 
-	font-family: "NeueHaasDisplayRoman";
-	src: url("/fonts/NeueHaasDisplay/NeueHaasDisplayRoman.woff2");
-	src: url("/fonts/NeueHaasDisplay/NeueHaasDisplayRoman.woff2?#iefix") format("embedded-opentype"),
-			url("/fonts/NeueHaasDisplay/NeueHaasDisplayRoman.woff2") format("woff2");
-
-	font-family: "GaramondPremierProItalic";
-	src: url("/fonts/GaramondPremierPro/GaramondPremierPro_ItalicDisplay.woff2");
-	src: url("/fonts/GaramondPremierPro/GaramondPremierPro_ItalicDisplay.woff2?#iefix") format("embedded-opentype"),
-			url("/fonts/GaramondPremierPro/GaramondPremierPro_ItalicDisplay.woff2") format("woff2");
-} */
 @font-face {
 	font-family: 'NeueHaasDisplayLight';
 	src: url('../fonts/NeueHaasDisplay/NeueHaasDisplayLight.otf') format('opentype');

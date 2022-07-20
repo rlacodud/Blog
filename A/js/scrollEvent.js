@@ -2,17 +2,13 @@ window.onload = function() {
   setTimeout (function() {
     scrollTo(0, 0);
   }, 100);
-};
+}
 
 // horizontal
 var varWrap = document.querySelector(".var-wrap");
-var article = document.querySelectorAll("article");
-var varnumber = 0;
 
 var move = 0;
 var varDuration = 500;
-
-var var03 = ((varWrap.offsetWidth / article.length) * (article.length - 1)) * -1;
 
 var fixMode = false;
 
@@ -32,7 +28,6 @@ function mainScrollEvent(e) {
   let marginTop = -backTextMarginTop + documentHeight;
 
   // section1 텍스트 효과
-  console.log(backTextMarginTop)
   if(marginTop <= convertPx.vw(-250)) {
     $('.backText').css({
       'margin-top': marginTop + "px"
@@ -40,9 +35,18 @@ function mainScrollEvent(e) {
   }
 
   function onscrollw(e) {
+    if(documentHeight >= convertPx.vw(1500)) {
+      $('.sec1Top .leftText').addClass('fixEnd');
+      $('.sec1Top .centerText').addClass('fixEnd');
+      $('.sec1Top .rightText').addClass('fixEnd');
+    } else if (documentHeight <= convertPx.vw(1500)){
+      $('.sec1Top .leftText').removeClass('fixEnd');
+      $('.sec1Top .centerText').removeClass('fixEnd');
+      $('.sec1Top .rightText').removeClass('fixEnd');
+    }
     if($('#section3').hasClass('fixed')) {
       window.onmousewheel = function(event){
-        if (e.wheelDelta < 0 && move > var03) {
+        if (e.wheelDelta < 0 && move > convertPx.vw(-11500)) {
           // console.log("마우스아래");
           move -= varDuration;
         } else if(e.wheelDelta > 0 && move < 0) {
@@ -64,13 +68,13 @@ function mainScrollEvent(e) {
         // fixMode를 true로
         fixMode = true
       }
-      // 마우스를 내릴 때 7번째 이미지가 보여지는 상태이면
-      if (move <= var03) {
+      // 마우스를 내릴 때 한계까지 스크롤이 완료되었다면
+      if (move <= convertPx.vw(-11500)) {
         // fixMode를 false로
         fixMode = false
       }
       
-      if (move <= var03 && !fixMode) {
+      if (move <= convertPx.vw(-11500) && !fixMode) {
         $('#section3').removeClass('fixed');
         $('#section3').removeClass('fixeEnd');
       // section3 영역에 들어왔을 때
@@ -86,11 +90,11 @@ function mainScrollEvent(e) {
         // false 해제
         fixMode = false;
       }
-      if (documentHeight2 <= convertPx.vw(2700) && move <= var03) {
+      if (documentHeight2 <= convertPx.vw(2700) && move <= convertPx.vw(-11500)) {
         fixMode = true;
       }
 
-      if (move <= var03 && fixMode) {
+      if (move <= convertPx.vw(-11500) && fixMode) {
         $('#section3').removeClass('fixeEnd');
         $('#section3').addClass('fixed');
       } else if (!fixMode && move >= 0) {
@@ -132,7 +136,7 @@ function mainScrollEvent(e) {
     } else if (move <= convertPx.vw(-11000)) {
       reset();
       $('#section3 .image').addClass('seven');
-    } else if (move <= var03) {
+    } else if (move <= convertPx.vw(-11500)) {
       fixMode = false
     }
   }

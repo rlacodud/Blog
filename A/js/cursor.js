@@ -114,7 +114,7 @@ let interval = function () {
   classReset();
   // 해당 class 추가
   $('.cursor-dot').addClass(rValue);
-  console.log(rValue)
+  // console.log(rValue)
 }
 
 function randomCursorStop() {
