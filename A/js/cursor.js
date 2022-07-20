@@ -24,7 +24,6 @@ function onEnterBtnListItenEl(){
     for(var i = 0; i < btnListItemEl.length; i++) {
       btnListItemEl[i].classList.add('randomOff');
     }
-    rightTextEl.classList.add('randomOff');
 }
 
 function onLeaveBtnListItenEl(){
@@ -57,8 +56,8 @@ function onLeaveMore(){
 }
 
 function onEnterFooter() {
-  rightTextEl.classList.add('randomOff');
-  if(rightTextEl.classList.contains('randomOff')){
+  if(!rightTextEl.classList.contains('randomOff')){
+    rightTextEl.classList.add('randomOff');
     cursorDotEl.classList.remove('on-eye');
     cursorDotEl.classList.add('on-contact');
     cursorBGEl.classList.add('on');
@@ -66,8 +65,8 @@ function onEnterFooter() {
 }
 
 function onLeaveFooter() {
-  rightTextEl.classList.remove('randomOff');
-  if(!rightTextEl.classList.contains('randomOff')){
+  if(rightTextEl.classList.contains('randomOff')){
+    rightTextEl.classList.remove('randomOff');
     cursorDotEl.classList.remove('on-eye');
     cursorDotEl.classList.remove('on-contact');
     cursorBGEl.classList.remove('on');
@@ -115,18 +114,39 @@ let interval = function () {
   classReset();
   // 해당 class 추가
   $('.cursor-dot').addClass(rValue);
+  console.log(rValue)
 }
 
-// 랜덤 커서
+// function randomCursorStart() {
+//   classReset();
+//   setInterval(interval, 500)
+// }
+
+function randomCursorStop() {
+  clearInterval(interval);
+
+}
+
+// // 랜덤 커서
 let randomCursor = function () {
-  if(btnListItemEl[0].classList.contains('randomOff') || btnListItemEl[1].classList.contains('randomOff') || btnListItemEl[2].classList.contains('randomOff') || rightTextEl.classList.contains('randomOff') || moreEl.classList.contains('randomOff')) {
+  if(btnListItemEl[0].classList.contains('randomOff') || btnListItemEl[1].classList.contains('randomOff') || btnListItemEl[2].classList.contains('randomOff')) {
+    console.log('클래스리셋')
     classReset();
+    randomCursorStop()
   // navigation의 영역에서 벗어났을 때에만 적용되도록
-  } else {
-    // console.log('이때인가')
-    
+  } 
+  if(rightTextEl.classList.contains('randomOff') || moreEl.classList.contains('randomOff')) {
+    console.log('클래스리셋')
+    classReset();
+    randomCursorStop()
+  // navigation의 영역에서 벗어났을 때에만 적용되도록
+  } 
+  if (!btnListItemEl[0].classList.contains('randomOff')) {
+    console.log('이때인가')
+  // setInterval(interval, 500)
   }
 }
+
 setInterval(interval, 500)
 setInterval(randomCursor, 100)
 
