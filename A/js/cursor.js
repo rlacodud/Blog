@@ -87,7 +87,7 @@ function addEvent(){
 }
 
 function init(){
-    addEvent();
+  addEvent();
 }
 init();
 
@@ -117,33 +117,15 @@ let interval = function () {
   console.log(rValue)
 }
 
-// function randomCursorStart() {
-//   classReset();
-//   setInterval(interval, 500)
-// }
-
 function randomCursorStop() {
   clearInterval(interval);
-
 }
 
 // // 랜덤 커서
 let randomCursor = function () {
-  if(btnListItemEl[0].classList.contains('randomOff') || btnListItemEl[1].classList.contains('randomOff') || btnListItemEl[2].classList.contains('randomOff')) {
-    console.log('클래스리셋')
+  if(btnListItemEl[0].classList.contains('randomOff') || btnListItemEl[1].classList.contains('randomOff') || btnListItemEl[2].classList.contains('randomOff') || rightTextEl.classList.contains('randomOff') || moreEl.classList.contains('randomOff')) {
     classReset();
     randomCursorStop()
-  // navigation의 영역에서 벗어났을 때에만 적용되도록
-  } 
-  if(rightTextEl.classList.contains('randomOff') || moreEl.classList.contains('randomOff')) {
-    console.log('클래스리셋')
-    classReset();
-    randomCursorStop()
-  // navigation의 영역에서 벗어났을 때에만 적용되도록
-  } 
-  if (!btnListItemEl[0].classList.contains('randomOff')) {
-    console.log('이때인가')
-  // setInterval(interval, 500)
   }
 }
 

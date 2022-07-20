@@ -12,7 +12,6 @@ var varDuration = 0;
 var var03 = ((varWrap.offsetWidth / article.length) * (article.length - 1)) * -1;
 
 var fixMode = false;
-var test = 1
 
 function mainScrollEvent(e) {
   var convertPx = {

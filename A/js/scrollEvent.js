@@ -15,7 +15,6 @@ var varDuration = 500;
 var var03 = ((varWrap.offsetWidth / article.length) * (article.length - 1)) * -1;
 
 var fixMode = false;
-var test = 1
 
 function mainScrollEvent(e) {
   var convertPx = {
@@ -59,7 +58,6 @@ function mainScrollEvent(e) {
   function fixAndFixEnd(e) {
     let documentHeight2 = $(document).scrollTop();
     // 마우스 아래
-    // console.log(documentHeight2, convertPx.vw(2700), fixMode)
     if (e.wheelDelta < 0) {
       // 마우스를 내릴 때 section3 영역 안에 들어오면
       if (documentHeight2 >= convertPx.vw(2600)) {
@@ -111,7 +109,6 @@ function mainScrollEvent(e) {
     $('#section3 .image').removeClass('six');
     $('#section3 .image').removeClass('seven');
   }
-  // var windowLeft = $(window).scrollLeft();
 
   function changeImage() {
     if(move <= 0 && move >= convertPx.vw(-1000)) {
