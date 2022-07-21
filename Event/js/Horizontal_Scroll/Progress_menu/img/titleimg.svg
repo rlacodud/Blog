@@ -1,0 +1,15 @@
+<svg id="그룹_280" data-name="그룹 280" xmlns="http://www.w3.org/2000/svg" width="720" height="44" viewBox="0 0 720 44">
+  <rect id="사각형_573" data-name="사각형 573" width="720" height="44" fill="#fff"/>
+  <g id="그룹_173" data-name="그룹 173" transform="translate(0 -1230)">
+    <text id="판매처_154" data-name="판매처 154" transform="translate(36 1265)" fill="#111" font-size="30" font-family="SourceHanSansK-Bold, Source Han Sans K" font-weight="700" letter-spacing="-0.01em"><tspan x="0" y="0">판매처 154</tspan></text>
+    <g id="그룹_105" data-name="그룹 105" transform="translate(373 942)">
+      <g id="check" transform="translate(0 -1)">
+        <rect id="사각형_245" data-name="사각형 245" width="36" height="36" rx="5" transform="translate(173 293)" fill="#fa3b53"/>
+        <path id="패스_18" data-name="패스 18" d="M10767.693-22848l7.971,7.9,11.416-12.277" transform="translate(-10586.387 23157.238)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </g>
+      <g id="오늘출발" transform="translate(-48 1)">
+        <text id="오늘출발-2" data-name="오늘출발" transform="translate(267 319)" fill="#111" font-size="25" font-family="SourceHanSansK-Regular, Source Han Sans K"><tspan x="0" y="0">오늘출발</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,14 @@
+.background-image {background-position: center; background-repeat: no-repeat; background-size: cover; object-fit: cover;}
+
+/* 변경되는 친구 */
+.cursor-dot {z-index:1000; display: none;}
+.cursor-dot,
+.textChat {overflow:hidden; position:fixed; top:50%; left:50%; -webkit-transform:translateX(-50%) translateY(-50%); -moz-transform:translateX(-50%) translateY(-50%);-o-transform:translateX(-50%) translateY(-50%);-ms-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%);pointer-events:none}
+.cursor-dot.lunch,
+.clickEmoji.lunch {z-index: 1000; display: block; width:calc(100vw*44/1920); height:calc(100vw*50/1920); background-image: url('../img/lunch.png');}
+.cursor-dot.vacation,
+.clickEmoji.vacation {z-index: 1000; display: block; width:calc(100vw*44/1920); height:calc(100vw*50/1920); background-image: url('../img/vacation.png');}
+.cursor-dot.reward,
+.clickEmoji.reward {z-index: 1000; display: block; width:calc(100vw*50/1920); height:calc(100vw*50/1920); background-image: url('../img/reward.png');}
+.textChat {transition: opacity ease-in-out 0.3s; z-index: 1000; display: none; text-align: center; width: auto; height: calc(100vw*60/1920); padding: 0 calc(100vw*30/1920); color: #fff; background: #000; border-radius: calc(100vw*29/1920); font-size: calc(100vw*20/1920); line-height: calc(100vw*60/1920);}
+.clickEmoji {transition: opacity ease-in-out 0.3s; display: none;}

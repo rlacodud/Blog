@@ -1,0 +1,8 @@
+.apply {width: calc(100vw * 240 / 1920); height: calc(100vw * 72 / 1920); background-color: #000; color: #fff; font-size: calc(100vw * 24 / 1920); font-weight: bold; text-align: center; border-radius: calc(100vw * 60 / 1920); overflow: hidden; border: none;}
+.apply p {display: block; height: calc(100vw * 33 / 1920); overflow: hidden; margin-left: 0%; color: #fff;}
+.apply:hover {background-color: #ED1B94;}
+.apply:hover p {display: inline-block; white-space: nowrap; will-change: transform; animation: marquee 12s linear infinite;}
+@keyframes marquee {
+    0% {transform: translateX(0);}
+    100% {transform: translateX(-90%);}
+}

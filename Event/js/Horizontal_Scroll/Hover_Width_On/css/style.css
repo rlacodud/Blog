@@ -1,0 +1,11 @@
+body {background: #000;}
+.button-container {position: absolute; top: 58%; left: 50%; transform: translateX(-50%); user-select: none;}
+.button-container button a {vertical-align: middle; display: inline-block; width: 100%; height: 100%; line-height: calc(100vw*50/1920);}
+.button-container button.widthOn {margin: 0;}
+.button-container #button-two {margin: 0 calc(100vw*12/1920);}
+.button-container .widthOn::before {content: ''; display: inline-block; position: absolute; z-index: -1; top: 0; left: 0; width: 0; height: 100%; background: #CC2132; transition: all ease-in-out 0.3s;}
+.button-container .widthOn.on::before {width: 100%; background: #CC2132;}
+.button-container .widthOn.on {border: none; font-family: 'Pretendard-ExtraBold';}
+.button-container button {position: relative; width: calc(100vw*140/1920); height: calc(100vw*50/1920); text-align: center; font-size: calc(100vw*14/1920); line-height: calc(100vw*16/1920); color: #fff; background: transparent; border: 1px solid #fff; transition: all ease-in-out 0.3s; cursor: pointer;}
+.button-container button a {color: #fff;}
+.button-container button.active {background: #CC2132; font-family: 'Pretendard-ExtraBold'; border: none;}

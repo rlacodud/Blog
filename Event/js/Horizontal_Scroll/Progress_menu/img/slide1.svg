@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="210" height="144" viewBox="0 0 210 144">
+  <g id="그룹_224" data-name="그룹 224" transform="translate(-174 -1276)">
+    <g id="사각형_414" data-name="사각형 414" transform="translate(174 1276)" fill="#fff" stroke="#fa3b53" stroke-width="2">
+      <rect width="210" height="144" rx="10" stroke="none"/>
+      <rect x="1" y="1" width="208" height="142" rx="9" fill="none"/>
+    </g>
+    <text id="기본구성_SSD_512GB_1_847_000원" data-name="기본구성 SSD
+512GB
+1,847,000원" transform="translate(201 1323)" fill="#fa3b53" font-size="24" font-family="SourceHanSansK-Regular, Source Han Sans K" letter-spacing="-0.01em"><tspan fill="#000"><tspan x="0" y="0">기본구성 SSD</tspan><tspan x="0" y="35">512GB</tspan></tspan><tspan font-family="SourceHanSansK-Bold, Source Han Sans K" font-weight="700"><tspan x="0" y="70">1,847,000원</tspan></tspan></text>
+  </g>
+</svg>
