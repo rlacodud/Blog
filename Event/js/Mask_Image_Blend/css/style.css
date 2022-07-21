@@ -1,0 +1,18 @@
+:root {
+  --pct1: 33;
+  --pct2: 66;
+  --angle: 90;
+}
+
+body {display: grid; min-height: 100vh; place-content: center; padding: 2rem;}
+
+.container {position: relative; min-height: 40vh; min-width: 50vw; aspect-ratio: 3 / 2;}
+.container > * {position: absolute; inset: 0; background-size: cover;}
+.container .p1 {background-image: url(https://images.unsplash.com/photo-1654445875514-90eb0d03a9f1?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY1NjMxODM2Mw&ixlib=rb-1.2.1&q=80&w=800);}
+.container .p2 {background-image: url(https://images.unsplash.com/photo-1654169761792-14abd60cc8ea?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY1NjMxODQ4Mg&ixlib=rb-1.2.1&q=80&w=800); -webkit-mask-image: linear-gradient(calc(var(--angle) * 1deg), transparent calc(var(--pct1) * 1%), #fff calc(var(--pct2) * 1%));}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
