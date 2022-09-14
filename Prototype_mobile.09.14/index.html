@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prototype Mobile</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="container">
+      <section id="section1">
+      </section>
+    </div>
+
+    <div class="tool-container">
+      <div class="tool">
+        <button class="tool-button" id="background-color"><i class="button-icon"></i></button>
+        <button class="tool-button" id="background-image"><label for="file">
+            <div class="btn-upload"><i class="button-icon"></i></div>
+          </label>
+          <input type="file" name="file" id="file" accept="image/png, image/jpeg"></button>
+        <button class="tool-button" id="icon"><i class="button-icon"></i></button>
+        <button class="tool-button" id="text"><i class="button-icon"></i></button>
+      </div>
+    </div>
+
+    <div class="back-color-tool-container">
+      <div class="back-color-list">
+        <div class="back-color" id="red"></div>
+        <div class="back-color" id="orange"></div>
+        <div class="back-color" id="yellow"></div>
+        <div class="back-color" id="green"></div>
+        <div class="back-color" id="blue"></div>
+        <div class="back-color" id="indigo"></div>
+        <div class="back-color" id="purple"></div>
+        <div class="back-color" id="gray"></div>
+        <div class="back-color" id="black"></div>
+        <div class="back-color" id="white"></div>
+      </div>
+    </div>
+
+    <div class="background-image-container">
+      <button class="close">X</button>
+      <ul class="background-image-list">
+        <li class="background-image" id="background-one"></li>
+        <li class="background-image" id="background-two"></li>
+      </ul>
+    </div>
+
+    <div class="icon-tool-container">
+      <button class="close">X</button>
+      <ul class="icon-list">
+        <li class="icon" id="airpods"></li>
+        <li class="icon" id="bluetooth"></li>
+        <li class="icon" id="cards"></li>
+        <li class="icon" id="carrot"></li>
+        <li class="icon" id="delete"></li>
+        <li class="icon" id="discount"></li>
+        <li class="icon" id="evaluation"></li>
+        <li class="icon" id="gun"></li>
+        <li class="icon" id="music"></li>
+        <li class="icon" id="pumpkin"></li>
+        <li class="icon" id="shopping"></li>
+        <li class="icon" id="star"></li>
+        <li class="icon" id="pin"></li>
+        <li class="icon" id="ball"></li>
+        <li class="icon" id="cup"></li>
+      </ul>
+    </div>
+
+    <div class="input-container">
+      <button class="close">X</button>
+      <textarea class="input-area"></textarea>
+    </div>
+
+    <div class="remove-container">
+      <button class="remove"></button>
+    </div>
+
+    <div class="download-container">
+      <button class="download"></button>
+    </div>
+  </div>
+
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="./js/Scene.min.js"></script>
+  <script src="./js/Moveable.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.2/FileSaver.min.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>

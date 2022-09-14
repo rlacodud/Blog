@@ -1,0 +1,90 @@
+body {width: 360px; max-width: 360px; height: 640px; max-height: 640px; overflow: hidden; border: 1px solid #000;}
+.wrap {width: 100%; height: 100%; position: relative; overflow: hidden; background: #000;}
+.container {width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;}
+#section1 {flex: 1; max-width: 320px; min-height: 400px; overflow: hidden; border: 1px solid; border-radius: 20px; background: #fff;}
+#section1.one {background-image: url(../images/background1.jpg);}
+#section1.two {background-image: url(../images/background2.jpg);}
+.close {background: transparent; color: #000; font-size: 20px; position: absolute; right: 0; top: 5px; cursor: pointer; border: none;}
+input {display: none;}
+
+.tool-container {width: 100%; height: 60px; position: absolute; left: 0; bottom: 0; z-index: 1; border-top: 1px solid #000; background: #fff;}
+.tool-container .tool {width: 100%; height: 100%; display: flex;}
+.tool-container .tool-button {flex: 1; background: transparent; border: none; cursor: pointer;}
+.tool-container .tool-button.active {border: 1px solid #000;}
+
+.back-color-tool-container,
+.background-image-container,
+.icon-tool-container,
+.remove-container {width: 100%; height: 200px; position: absolute; left: 0; bottom: -150px; background: #fff; transition: all 0.3s ease-in-out; border-top: 1px solid #000;}
+.back-color-tool-container.on,
+.background-image-container.on,
+.icon-tool-container.on,
+.remove-container.on {bottom: 60px;}
+
+.back-color-tool-container {height: 100px;}
+.back-color-tool-container .back-color-list {position: absolute; display: flex; height: 100%; width: 100%; overflow-x: auto; font-size: 0;}
+.back-color-tool-container .back-color-list::-webkit-scrollbar {display: none;}
+.back-color-tool-container .back-color-list .back-color{flex: 1; display: inline-block; position: relative; min-width: 100px !important; height: 100px; cursor: pointer;}
+#red{background-color: red;}
+#orange{background-color: orange;}
+#yellow{background-color: yellow;}
+#green{background-color: green;}
+#blue{background-color: blue;}
+#indigo{background-color: indigo;}
+#purple{background-color: purple;}
+#gray{background-color: gray;}
+#black{background-color: black;}
+#white{background-color: white;}
+
+#section1,
+.background-image-list .background-image,
+.icon-tool-container .icon-list .icon,
+.button-icon,
+.remove,
+.download {display: inline-block; background-position: center; background-size: cover; object-fit: cover; background-repeat: no-repeat;}
+#background-color .button-icon {width: 48px; height: 48px; background-image: url(../images/button/button_background_color.svg);}
+#background-image .button-icon {width: 48px; height: 48px; background-image: url(../images/button/button_background_image.svg);}
+#icon .button-icon {width: 48px; height: 48px; background-image: url(../images/button/button_icon.svg);}
+#text .button-icon {width: 48px; height: 48px; background-image: url(../images/button/button_text.svg);}
+
+.background-image-container .background-image-list {width: 100%; height: 100%; display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px; padding: 30px;}
+.background-image-container .background-image-list .background-image {display: inline-block; cursor: pointer; border-radius: 30px;}
+.background-image-container .background-image-list #background-one {background-image: url(../images/background1.jpg);}
+.background-image-container .background-image-list #background-two {background-image: url(../images/background2.jpg);}
+
+.icon-tool-container .icon-list {width: 100%; height: 100%; display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr; grid-gap: 10px; padding: 30px;}
+.icon-tool-container .icon-list .icon {display: inline-block; cursor: pointer;}
+#airpods {width: 48px; height: 48px; background-image: url(../images/icon/icon_airpods.svg);}
+#bluetooth {width: 48px; height: 48px; background-image: url(../images/icon/icon_bluetooth.svg);}
+#cards {width: 48px; height: 48px; background-image: url(../images/icon/icon_cards.svg);}
+#carrot {width: 48px; height: 48px; background-image: url(../images/icon/icon_carrot.svg);}
+#delete {width: 48px; height: 48px; background-image: url(../images/icon/icon_delete.svg);}
+#discount {width: 48px; height: 48px; background-image: url(../images/icon/icon_discount.svg);}
+#evaluation {width: 48px; height: 48px; background-image: url(../images/icon/icon_evaluation.svg);}
+#gun {width: 48px; height: 34px; background-image: url(../images/icon/icon_gun.svg);}
+#music {width: 48px; height: 48px; background-image: url(../images/icon/icon_music.svg);}
+#pumpkin {width: 48px; height: 48px; background-image: url(../images/icon/icon_pumpkin.svg);}
+#shopping {width: 48px; height: 48px; background-image: url(../images/icon/icon_shopping.svg);}
+#star {width: 48px; height: 48px; background-image: url(../images/icon/icon_star.svg);}
+#pin {width: 48px; height: 48px; background-image: url(../images/icon/icon_pin.svg);}
+#ball {width: 48px; height: 48px; background-image: url(../images/icon/icon_ball.svg);}
+#cup {width: 48px; height: 48px; background-image: url(../images/icon/icon_cup.svg);}
+
+.input-container {width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); position: absolute; top: 0; left: 0; z-index: 4000; display: none;}
+.input-container.on {display: block;}
+.input-container .close {color: #fff;}
+.input-container .input-area {width: 200px; height: 100px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+
+.remove-container {height: 60px; display: flex; align-items: center; justify-content: center;}
+.remove-container .remove {width: 48px; height: 48px; background-color: transparent; background-image: url(../images/icon/icon_delete.svg); border: none; cursor: pointer;}
+
+.download-container {width: 30px; height: 30px; position: absolute; top: 10px; right: 24px; cursor: pointer;}
+.download-container .download {width: 100%; height: 100%; background-color: transparent; border: none; background-image: url(../images/button/button_download.svg);}
+
+.drag,
+.drag-text {position: absolute; width: 48px; height: 48px; top: 50%; left: 50%; transform: translate(-50%, -50%); user-select: none; background-position: center; background-size: cover; object-fit: cover; background-repeat: no-repeat;}
+.drag-text {border: none; background: transparent; color: #000;}
+
+.moveable-control-box {display: none !important;}
+.drag-area.on .moveable-control-box,
+.drag-area-text.on .moveable-control-box {display: block !important;}
