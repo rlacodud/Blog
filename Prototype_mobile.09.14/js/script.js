@@ -270,7 +270,7 @@ $('.icon').on('touchstart', function (e) {
   moveable.dragStart(e);
 
   // 중복 방지를 위해 off 후 on 실행
-  $('.drag-area').on('touchstart', function () {
+  $('.drag-area').off('touchstart').on('touchstart', function () {
     // reset 호출
     reset();
     // 선택한 drag-area에 on class 부여(tool 활성화)
@@ -284,7 +284,8 @@ $('.icon').on('touchstart', function (e) {
     // 현재 선택된 element를 thisDrag로 정의
     let thisDrag = $(this);
     // remove 버튼 클릭 시
-    $('.remove').on('touchstart', function () {
+    $('.remove').off('touchstart').on('touchstart', function () {
+      console.log(thisDrag)
       // 현재 선택된 element 제거
       thisDrag.remove();
     })
@@ -384,7 +385,7 @@ $('#text').on('touchstart', function (e) {
   $('.input-container .input-area').val(prevText);
 
   // 중복 방지를 위해 off 후 on 실행
-  $('.drag-area-text').on('touchstart', function (e) {
+  $('.drag-area-text').off('touchstart').on('touchstart', function (e) {
     // reset 호출
     reset();
     // 선택한 drag-area-text에 on class 부여
@@ -396,11 +397,11 @@ $('#text').on('touchstart', function (e) {
     $('.remove-container').addClass('on');
 
     // 현재 선택된 element를 thisDrag로 정의
-    let thisDrag = $(this);
+    let thisDragText = $(this);
     // remove 버튼 클릭 시
-    $('.remove').on('touchstart', function () {
+    $('.remove').off('touchstart').on('touchstart', function () {
       // 현재 선택된 element 제거
-      thisDrag.remove();
+      thisDragText.remove();
     })
   })
 
