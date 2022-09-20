@@ -106,9 +106,8 @@ $('.back-image').off('click touchstart').on('click touchstart', function () {
     $('.back-color-tool-container').removeClass('on');
 
     let bgVal = $(this).val();
-    console.log(bgVal)
     $('#section1').css('background-color', 'none');
-    $('#section1').css('background-image', `url(../images/${bgVal}.jpg)`);
+    $('#section1').addClass(bgVal);
     activeButton();
 })
 
