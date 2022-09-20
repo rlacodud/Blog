@@ -107,7 +107,7 @@ $('.back-image').off('click touchstart').on('click touchstart', function () {
 
     let bgVal = $(this).val();
     $('#section1').css('background-color', 'none');
-    $('#section1').addClass(bgVal);
+    $('#section1').css('background-image', `url(https://rlacodud.github.io/Blog/Prototype_mobile_09.20/images/${bgVal}.jpg)`);
     activeButton();
 })
 
