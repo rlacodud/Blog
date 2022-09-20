@@ -99,6 +99,19 @@ $('#background-image').on('click touchstart', function () {
   }
 })
 
+// back-image 클릭 시
+$('.back-image').off('click touchstart').on('click touchstart', function () {
+  reset();
+    // back-color-tool-container 비활성화
+    $('.back-color-tool-container').removeClass('on');
+
+    let bgVal = $(this).val();
+    console.log(bgVal)
+    $('#section1').css('background-color', 'none');
+    $('#section1').css('background-image', `url(../images/${bgVal}.jpg)`);
+    activeButton();
+})
+
 // Background Upload------------------------------------------------------------------------------------
 $('#background-upload').on('click touchstart', function () {
   if(isGuid){
@@ -109,6 +122,7 @@ $('#background-upload').on('click touchstart', function () {
     $('#file').prop('disabled', false)
   }
 })
+
 
 // 이미지 파일이 업로드되었을 때
   $('#file').on('change', function () {
