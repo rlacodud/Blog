@@ -27,6 +27,7 @@ let colorVal = null;
 let thisColorVal = null;
 // 선택한 텍스트 사이즈를 담을 변수
 let sizeVal = null;
+let thisSizeVal = null;
 
 let dragEl = null;
 let target = null;
@@ -53,6 +54,7 @@ function reset() {
   $('.remove').removeClass('on');
   $('.edit').removeClass('on');
   // container on class 초기화
+  // $('.text-deco-container').removeClass('on');
   $('.back-image-tool-container').removeClass('on');
   $('.icon-tool-container').removeClass('on');
   // 모든 tool-button active class 초기화
@@ -355,32 +357,36 @@ $('#text').off('click touchstart').on('click touchstart', function (e) {
 
     // 현재 선택한 텍스트의 color id를 thisColorVal에 대입
     thisColorVal = $('.drag-area-text.on .drag-text').attr('id');
+
+    thisSizeVal = $('.drag-area-text.on .drag-text').css('font-size');
+
     // 받아온 color id로 해당 text color 체크
     thisColorVal = 'input[type="radio"]#' + thisColorVal;
     $(thisColorVal).prop('checked', true);
+
+    thisSizeVal = 'input[type="radio"]#' + thisSizeVal;
+    $(thisSizeVal).prop('checked', true);
   })
 });
 
 
-  // text size 클릭 시
-  $('.text-size').off('click touchstart').on('click touchstart', function () {
-    // 해당 value값을 받아와 sizeVal에 대입
-    sizeVal = $(this).val();
-    // text에 적용
-    $('.drag-area-text.on .drag-text').css('font-size', `${sizeVal}`);
-    // 해당 size값을 text의 id로 적용
-    $('.drag-area-text.on .drag-text').attr('id', sizeVal);
+// text size 클릭 시
+$('.text-size').off('click touchstart').on('click touchstart', function () {
+  // 해당 value값을 받아와 sizeVal에 대입
+  sizeVal = $(this).val();
+  // text에 적용
+  $('.drag-area-text.on .drag-text').css('font-size', `${sizeVal}`);
 
-    // 현재 생성된 drag-area-text의 text El을 thisText에 대입
-    thisText = $('.drag-area-text.on .drag-text .text');
+  // 현재 생성된 drag-area-text의 text El을 thisText에 대입
+  thisText = $('.drag-area-text.on .drag-text .text');
 
-    // 입력된 text의 크기만큼 툴바의 크기가 정의되도록
-    // text의 너비와 높이를 구한 뒤 thisTextWidth와 thisTextHeight에 대입
-    thisTextWidth = thisText.width();
-    thisTextHeight = thisText.height();
+  // 입력된 text의 크기만큼 툴바의 크기가 정의되도록
+  // text의 너비와 높이를 구한 뒤 thisTextWidth와 thisTextHeight에 대입
+  thisTextWidth = thisText.width();
+  thisTextHeight = thisText.height();
 
-    inputDone();
-  })
+  inputDone();
+})
 
 $('.input-area').on('click touchstart', function (e) {
   // 이벤트 버블링 방지
@@ -429,18 +435,17 @@ $('.text-color').off('click touchstart').on('click touchstart', function () {
   $('.drag-area-text.on .drag-text').attr('id', colorVal);
 })
 
-
-$('.download').on('click touchstart', function () {
-  if (isImage) {
-    if (!isDeco) {
-      alert('배경화면 꾸며주세요!')
-    }
-    reset();
-    if (isDeco) {
-      domtoimage.toBlob(document.querySelector('#section1'))
-        .then(function (blob) {
-          window.saveAs(blob, 'image__.png');
-        });
-    }
-  }
-})
+// $('.download').off('click touchstart').on('click touchstart', function () {
+//   if (isImage) {
+//     if (!isDeco) {
+//       alert('배경화면 꾸며주세요!')
+//     }
+//     if (isDeco) {
+//       reset();
+//       domtoimage.toBlob(document.querySelector('#section1'))
+//         .then(function (blob) {
+//           window.saveAs(blob, 'image__.png');
+//         });
+//     }
+//   }
+// })

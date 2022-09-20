@@ -95,7 +95,7 @@ input[type="radio"] + label:before {width: 100%; height: 100%; content: ''; disp
 .text-deco-container .text-color-tool-container input[type="radio"]#gray + label:before{background-color: gray;}
 .text-deco-container .text-color-tool-container input[type="radio"]#black + label:before{background-color: black;}
 .text-deco-container .text-color-tool-container input[type="radio"]#white + label:before{background-color: white;}
-.text-deco-container .text-color-tool-container [type="radio"]:checked + label::before {background-image: url(../images/icon/check.png); background-size: 30px !important;}
+.text-deco-container [type="radio"]:checked + label::before {background-image: url(../images/icon/check.png); background-size: 30px !important;}
 
 .text-deco-container .text-size-tool-container {width: 88px; height: 144px; margin-top: 18px;}
 .text-deco-container .text-size-tool-container .text-size-list {width: 100%; height: 144px; display: grid; grid-template-columns: 1fr; grid-row-gap: 18px;}
