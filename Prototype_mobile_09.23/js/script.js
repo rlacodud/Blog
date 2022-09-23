@@ -292,28 +292,27 @@ $('.dc_sticker button').on('mousedown touchstart', function (e) {
 
   // 생성된 dc_drag-area에 on class 부여
   dragEl.classList.add('on');
-
   // dc_drag-area 클릭 시
   $('.dc_drag-area').on('mousedown touchstart', function (e) {
     // 이벤트 버블링 방지
     e.stopPropagation();
     // reset 호출
     reset();
-
+  
     // 선택한 dc_drag-area에 on class 부여(tool 활성화)
     $(this).addClass('on');
     // 선택한 dc_drag-area를 dc_deco-zone의 맨 마지막에 삽입(최상위 객체로 전환)
     $(this).appendTo($('.dc_deco-zone'));
-
+  
     // 현재 선택된 element를 thisDrag로 정의
     let thisDrag = $(this);
     // remove 버튼 클릭 시
-    $(this).find('.dc_remove').off('click touchstart').on('click touchstart', function () {
+    $(this).find('.dc_remove').off('mousedown touchstart').on('mousedown touchstart', function () {
       // 현재 선택된 element 제거
       thisDrag.remove();
     })
-  })
 });
+})
 
 // Text----------------------------------------------------------------
 // 텍스트 리셋
