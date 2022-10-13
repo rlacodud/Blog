@@ -1,0 +1,387 @@
+.list {
+  width: 100px;
+  float: left;
+  li {
+    color: red;
+    background: url("./image.jpg");
+    &:last-child {
+      margin-right: -10px;
+    }
+  }
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+.box { @include border-radius(10px); }
+
+.section {
+  width: 100%;
+  .list {
+    padding: 20px;
+    li {
+      float: left;
+    }
+  }
+}
+
+.btn {
+  position: absolute;
+  &.active {
+    color: red;
+  }
+}
+
+.list {
+  li {
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.fs {
+  &-small { font-size: 12px; }
+  &-medium { font-size: 14px; }
+  &-large { font-size: 16px; }
+}
+
+.list {
+  $w: 100px;
+  $h: 50px;
+  li {
+    width: $w;
+    height: $h;
+  }
+  @at-root .box {
+    width: $w;
+    height: $h;
+  }
+}
+
+.box {
+  font: {
+    weight: bold;
+    size: 10px;
+    family: sans-serif;
+  };
+  margin: {
+    top: 10px;
+    left: 20px;
+  };
+  padding: {
+    bottom: 40px;
+    right: 30px;
+  };
+}
+
+// $변수이름: 속성값;
+
+$color-primary: #e96900;
+$url-images: "/assets/images/";
+$w: 200px;
+
+.box {
+  width: $w;
+  margin-left: $w;
+  background: $color-primary url($url-images + "bg.jpg");
+}
+
+.box1 {
+  $color: #111;
+  background: $color;
+}
+// Error
+.box2 {
+  background: $color;
+}
+
+$red: #FF0000;
+$blue: #0000FF;
+
+$color-primary: $blue;
+$color-danger: $red;
+
+.box {
+  color: $color-primary;
+  background: $color-danger;
+}
+
+.box1 {
+  $color: #111 !global;
+  background: $color;
+}
+.box2 {
+  background: $color;
+}
+
+$color-primary: red;
+
+.box {
+  $color-primary: blue !default;
+  background: $color-primary;
+}
+
+$family: unquote("Droid+Sans");
+@import url("http://fonts.googleapis.com/css?family=#{$family}");
+
+div {
+  color: #123456 + #345678;
+  // #(12)(34)(56) + #(34)(56)(78)
+  // R: 12 + 34 = 46
+  // G: 34 + 56 = 8a
+  // B: 56 + 78 = ce
+  background: rgba(50, 100, 150, .5) + rgba(10, 20, 30, .5);
+  // R: 50 + 10 = 60
+  // G: 100 + 20 = 120
+  // B: 150 + 30 = 180
+  // A: Alpha channels must be equal
+}
+
+// @mixin 믹스인 이름($매개변수) {
+//   스타일;
+// }
+// @include 믹스인 이름(인수);
+
+@mixin dash-line($width, $color) {
+  border: $width dashed $color;
+}
+
+.box1 { @include dash-line(1px, red); }
+.box2 { @include dash-line(4px, blue); }
+
+// @mixin 믹스인 이름($매개변수: 기본값) {
+//   스타일;
+// }
+
+@mixin dash-line($width: 1px, $color: black) {
+  border: $width dashed $color;
+}
+
+.box1 { @include dash-line; }
+.box2 { @include dash-line(4px); }
+
+// @mixin 믹스인 이름($매개변수...) {
+//   스타일;
+// }
+
+// @include 믹스인 이름(인수A, 인수B, 인수C);
+
+// 인수를 순서대로 하나씩 전달 받다가, 3번째 매개변수($bg-values)는 인수의 개수에 상관없이 받음
+@mixin bg($width, $height, $bg-values...) {
+  width: $width;
+  height: $height;
+  background: $bg-values;
+}
+
+div {
+  // 위의 Mixin(bg) 설정에 맞게 인수를 순서대로 전달하다가 3번째 이후부터는 개수에 상관없이 전달
+  @include bg(
+    100px,
+    200px,
+    url("/images/a.png") no-repeat 10px 20px,
+    url("/images/b.png") no-repeat,
+    url("/images/c.png")
+  );
+}
+
+@mixin font(
+  $style: normal,
+  $weight: normal,
+  $size: 16px,
+  $family: sans-serif
+) {
+  font: {
+    style: $style;
+    weight: $weight;
+    size: $size;
+    family: $family;
+  }
+}
+div {
+  // 매개변수 순서와 개수에 맞게 전달
+  $font-values: italic, bold, 16px, sans-serif;
+  @include font($font-values...);
+}
+span {
+  // 필요한 값만 키워드 인수로 변수에 담아 전달
+  $font-values: (style: italic, size: 22px);
+  @include font($font-values...);
+}
+a {
+  // 필요한 값만 키워드 인수로 전달
+  @include font((weight: 900, family: monospace)...);
+}
+
+// @mixin 믹스인 이름() {
+//   스타일;
+//   @content;
+// }
+
+// @include 믹스인 이름() {
+//   // 스타일 블록
+//   스타일;
+// }
+
+@mixin icon($url) {
+  &::after {
+    content: $url;
+    @content;
+  }
+}
+
+.icon2 {
+  // icon Mixin에 스타일 블록을 추가하여 사용
+  @include icon("/images/icon.png") {
+    position: absolute;
+  };
+}
+
+// @extend 선택자;
+
+.btn {
+  padding: 10px;
+  margin: 10px;
+  background: blue;
+}
+.btn-danger {
+  @extend .btn;
+  background: red;
+}
+
+// Mixins
+// @mixin 믹스인 이름($매개변수) {
+//   스타일;
+// }
+
+// Functions
+// @function 함수 이름($매개변수) {
+//   @return 값
+// }
+
+// Mixin
+// @include 믹스인 이름(인수);
+
+// Functions
+// 함수 이름(인수)
+
+$max-width: 980px;
+
+@function columns($number: 1, $columns: 12) {
+  @return $max-width * ($number / $columns)
+}
+
+.box_group {
+  width: $max-width;
+
+  .box1 {
+    width: columns();  // 1
+  }
+  .box2 {
+    width: columns(8);
+  }
+  .box3 {
+    width: columns(3);
+  }
+}
+
+// if(조건, 표현식1, 표현식2)
+$width: 555px;
+div {
+  width: if($width > 300px, $width, null);
+}
+
+// @if
+@if (조건) {
+  /* 조건이 참일 때 구문 */
+}
+
+// @if @else
+@if (조건) {
+  /* 조건이 참일 때 구문 */
+} @else {
+  /* 조건이 거짓일 때 구문 */
+}
+
+// @if @else if
+@if (조건1) {
+  /* 조건1이 참일 때 구문 */
+} @else if (조건2) {
+  /* 조건2가 참일 때 구문 */
+} @else {
+  /* 모두 거짓일 때 구문 */
+}
+
+// through
+// 종료 만큼 반복
+// @for $변수 from 시작 through 종료 {
+  // 반복 내용
+// }
+
+// to
+// 종료 직전까지 반복
+// @for $변수 from 시작 to 종료 {
+  // 반복 내용
+// }
+
+// 1부터 3번 반복
+@for $i from 1 through 3 {
+  .through:nth-child(#{$i}) {
+    width : 20px * $i
+  };
+};
+
+// 1부터 3 직전까지만 반복(2번 반복)
+@for $i from 1 to 3 {
+  .to:nth-child(#{$i}) {
+    width : 20px * $i
+  };
+};
+
+// @each $변수 in 데이터 {
+//   // 반복 내용
+// }
+
+// List Data
+$fruits: (apple, orange, banana, mango);
+
+.fruits {
+  @each $fruit in $fruits {
+    li.#{$fruit} {
+      background: url("/images/#{$fruit}.png");
+    }
+  }
+}
+
+// @each $key변수, $value변수 in 데이터 {
+//   // 반복 내용
+// }
+
+$fruits-data: (
+  apple: korea,
+  orange: china,
+  banana: japan
+);
+
+@each $fruit, $country in $fruits-data {
+  .box-#{$fruit} {
+    background: url("/images/#{$country}.png");
+  }
+}
+
+// @while 조건 {
+//   // 반복 내용
+// }
+
+$i: 6;
+
+@while $i > 0 {
+  .item-#{$i} {
+    width: 2px * $i;
+  }
+  $i: $i - 2;
+}
