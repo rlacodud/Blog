@@ -1,0 +1,34 @@
+.drag,
+.drag-text {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: #f55;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  line-height: 100px;
+  top: 100px;
+  left: 100px;
+  user-select: none;
+}
+
+.originalText,
+.drag-text {
+  background: transparent;
+  color: #000;
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.moveable-control-box {
+  opacity: 0 !important;
+}
+.drag-area.on .moveable-control-box,
+.drag-area-text.on .moveable-control-box {
+  opacity: 1 !important;
+}
