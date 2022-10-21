@@ -1,0 +1,34 @@
+.wrap {width: 100%; margin: 0 auto; padding: 40px;}
+.wrap h1 {font-size: calc(100vw*60/1920); font-weight: bold; text-align: center; margin-bottom: calc(100vw*80/1920);}
+
+.board_container,
+.contents_container,
+.editor_container {width: calc(100vw*1000/1920); display: flex; justify-content: flex-start; align-items: center; flex-direction: column; background-color: #ffffff; margin: 0 auto;}
+
+.board_container {position: relative; padding-top: 10px; padding-bottom: 10px;}
+.board_container .board {width: 100%;}
+.board_container .board .board_title,
+.board_container .board .board_content {width: 100%; display: flex; text-align: center; margin-bottom: 15px;}
+.board_container .board .board_title li,
+.board_container .board .board_content div,
+.board_container .board .board_content a {flex: 1;}
+.board_index-container {margin-top: calc(100vw*40/1920);}
+.board__index-link {all: unset; margin-right: 5px;}
+.board__index-link:hover {cursor: pointer; color: blue;}
+
+.contents_container {padding-top: 10px; padding-bottom: 10px;}
+.contents_Header {width: 100%; display: flex; justify-content: space-between; align-items: center; padding-bottom: 10px; border-bottom: 2px solid rgba(0, 0, 0, 0.08); margin-bottom: 20px;}
+.contents_Header .contents_title {flex: 0.8; text-align: left;}
+.contents_Header .contents_header-info {flex: 0.2; text-align: right; display: flex; justify-content: space-around; align-items: center;}
+.contents_content {width: 100%; display: flex; justify-content: start; align-items: center;}
+
+.editor_container {padding-top: 10px; padding-bottom: 10px;}
+.editor__form {width: 100%;}
+input {all: unset; border-radius: 5px; border: 1px solid rgba(0, 0, 0, 0.5);}
+.editor__title-input,
+.editor__content-input {width: 100%; padding: 5px 10px; margin-bottom: 10px;}
+.editor__content-input {height: 100px;}
+.editor__btn {all: unset; border: 1px solid rgba(0, 0, 0, 0.5); border-radius: 5px; padding: 5px 10px;}
+button:active {transform: scale(0.93);}
+
+.board_index-link {margin-right: calc(100vw*20/1920); cursor: pointer;}

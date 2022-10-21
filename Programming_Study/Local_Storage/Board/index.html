@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title> Local Storage 게시판</title>
+  <link href="./css/reset.css" rel="stylesheet" />
+  <link href="./css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="wrap">
+    <h1>Local Storage 게시판</h1>
+    <div class="board_container">
+      <div class="board">
+        <ul class="board_title">
+          <li>번호</li>
+          <li>제목</li>
+          <li>작성자</li>
+          <li>작성일</li>
+          <li>조회</li>
+        </ul>
+        <ul class="board_contents" id="board-body"></ul>
+      </div>
+      <div class="board_index-container" id="index-container"></div>
+    </div>
+    <div class="contents_container"></div>
+    <div class="editor_container">
+      <form action="#" class="editor__form" id="editor-form">
+        <input type="text" class="editor__title-input" id="editor-title-input" placeholder="제목" />
+        <input type="text" class="editor__content-input" id="editor-content-input" placeholder="내용" />
+        <button class="editor__btn" id="editor-submit-btn">작성 완료</button>
+      </form>
+    </div>
+  </div>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
