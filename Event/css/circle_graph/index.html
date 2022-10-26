@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Circle Graph</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<span class="chart" data-percent="86">
+		<span class="percent"></span>
+	</span>
+
+	<span class="btn js_update">Update chart</span>
+
+	<script src="./js/easypiechart.js"></script>
+	<script>
+	document.addEventListener('DOMContentLoaded', function() {
+		var chart = window.chart = new EasyPieChart(document.querySelector('span'), {
+			easing: 'easeOutElastic',
+			delay: 3000,
+			barColor: '#F4F6F9',
+			trackColor: '#D0D9D6',
+			scaleColor: false,
+			lineWidth: 20,
+			trackWidth: 16,
+			lineCap: 'round',
+			onStep: function(from, to, percent) {
+				this.el.children[0].innerHTML = Math.round(percent);
+			}
+		});
+
+		document.querySelector('.js_update').addEventListener('click', function(e) {
+			chart.update(Math.random()*200-100);
+		});
+
+	});
+	</script>
+</body>
+</html>

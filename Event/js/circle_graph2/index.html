@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="grid">
+    <section>
+      <h2>Positive chart value</h2>
+      <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="250" height="250" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#D0D9D6" />
+            <stop offset="100%" stop-color="#56B6DF" />
+          </linearGradient>
+        </defs>
+        <circle class="circle-chart__background" stroke="#efefef" stroke-width="3" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+        <circle class="circle-chart__circle" stroke="url(#gradient)" stroke-width="3" stroke-dasharray="30,100" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+        <g class="circle-chart__info">
+          <text class="circle-chart__percent" x="16.91549431" y="15.5" alignment-baseline="central" text-anchor="middle" font-size="8">30%</text>
+          <text class="circle-chart__subline" x="16.91549431" y="20.5" alignment-baseline="central" text-anchor="middle" font-size="2">Yay 30% progress!</text>
+        </g>
+      </svg>
+    </section>
+  
+    <section>
+      <h2>Negative chart value</h2>
+      <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+        <circle class="circle-chart__background" stroke="#efefef" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+        <circle class="circle-chart__circle circle-chart__circle--negative" stroke="#00acc1" stroke-width="2" stroke-dasharray="10,100" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+        <g class="circle-chart__info">
+          <text class="circle-chart__percent" x="16.91549431" y="15.5" alignment-baseline="central" text-anchor="middle" font-size="8">-10%</text>
+          <text class="circle-chart__subline" x="16.91549431" y="20.5" alignment-baseline="central" text-anchor="middle" font-size="2">Oh no :(</text>
+        </g>
+      </svg>
+    </section>
+  </div>
+</body>
+</html>
