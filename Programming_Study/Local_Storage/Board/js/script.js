@@ -13,9 +13,9 @@ const BoardList = 'boardLists';
 const BoardListsObj = [];
 // index
 let num = 0;
-// 저자
+// 작성자
 let author = 'Chaeng';
-// 작성 일시
+// 작성일
 let date = new Date();
 // 조회수 - 랜덤값 부여
 let views = Math.floor(Math.random() * 99) + 1;
@@ -77,7 +77,7 @@ function onEditorFormSubmit(e) {
   // input값 초기화
   titleInput.value = '';
   contentInput.value = '';
-  // 찾아보기
+  // 새로고침
   window.location.reload();
 }
 
@@ -87,7 +87,6 @@ function onTitleClick(e) {
   contentsContainer.textContent = ''
   // 로컬스토리지 BoardList에 저장되어있는 값을 불러와 json형태로 변형 후 lists에 대입
   const lists = JSON.parse(localStorage.getItem(BoardList));
-  console.log(e.target.parentNode)
   // 해당 타이틀의 a 링크의 id값을 받아와 정규표현식을 통해 index 숫자만으로 replace하여 index에 대입
   const index = e.target.parentNode.id.replace(/[a-z|-]/gi, '');
 
@@ -220,7 +219,7 @@ function showBoardLists() {
       linkToContent.addEventListener('click', onTitleClick);
     // 10일 때
     } else if (index === 10) {
-      // 콘텐츠의 길이를 10로 나눈 뒤 이를 반올림하여 제한값으로 지정
+      // 콘텐츠의 길이를 10로 나눈 뒤 이를 반올림하여 페이지 리스트의 수를 계산
       const boardIndexMax = Math.ceil(lists.length / 10);
       for (let i = 0; i < boardIndexMax; i++) {
         // indexContainer를 찾고
