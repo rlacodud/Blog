@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>path로 쿠폰 만들기</title>
+  <style>
+    .visual_container {
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #00b8ff;
+      border-radius: 20px;
+    }
+    .badge {
+      height: 20px;
+      margin: 0;
+      padding: 0 6px;
+      line-height: 20px;
+      color: #fff;
+      font-size: 13px;
+      border-radius: 6px;
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+    h1 {
+      margin: 20px 0 0;
+      text-align: center;
+      color: #fff;
+    }
+    .info_container {
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    button {
+      padding: 20px 10px;
+      font-size: 20px;
+      border: none;
+      color: rgb(0, 119, 255);
+      background-color: transparent;
+    }
+    button + button {
+      margin-top: 20px;
+    }
+    .code {
+      width: 100%;
+      color: #000;
+      border-radius: 6px;
+      border: 1px solid lightgray;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section id="visual">
+      <div class="visual_container">
+        <p class="badge">온라인</p>
+        <img width="120" src="./img/socar.png" alt="소카 로고"/>
+        <h1>
+          쏘카 전 차종<br/>
+          40% 할인
+        </h1>
+      </div>
+    </section>
+    <section id="info">
+      <div class="info_container">
+        <button type="button" class="code">SC22235RC7</button>
+        <button type="button">쿠폰번호 복사 및 등록하러 가기 ></button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
