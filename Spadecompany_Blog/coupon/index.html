@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>path로 쿠폰 만들기</title>
   <style>
+    main {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    section {
+      flex: 1;
+    }
     .visual_container {
       padding: 40px;
       display: flex;
@@ -12,7 +21,7 @@
       align-items: center;
       justify-content: center;
       background-color: #00b8ff;
-      border-radius: 20px;
+      border-radius: 20px 20px 0 0;
     }
     .badge {
       height: 20px;
@@ -35,6 +44,8 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      background-color: white;
+      border-radius: 0 0 20px 20px;
     }
     button {
       padding: 20px 10px;
@@ -75,4 +86,17 @@
     </section>
   </main>
 </body>
+<script>
+  const setCouponPath = () => {
+    const visual = document.getElementById('visual');
+    const couponW = visual.clientWidth;
+    const visualH = visual.clientHeight;
+    const info = document.getElementById('info');
+    const infoH = info.clientHeight;
+    visual.style.clipPath = `path('M0 0 L0 ${visualH - 10} Q10 ${visualH - 10} 10 ${visualH} L ${couponW - 10} ${visualH} Q${couponW - 10} ${visualH - 10} ${couponW} ${visualH - 10} L${couponW} 0 Z')`;
+    info.style.clipPath = `path('M10 0 Q10 10 0 10 L0 ${infoH} L${couponW} ${infoH} L${couponW} 10 Q${couponW - 10} 10 ${couponW - 10} 0 Z')`;
+  }
+  setCouponPath();
+  window.addEventListener('resize', setCouponPath);
+</script>
 </html>
