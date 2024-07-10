@@ -5,14 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>path로 쿠폰 만들기</title>
   <style>
+    body {
+      padding: 20px;
+    }
     main {
+      position: relative;
       width: 100%;
       display: flex;
       flex-direction: column;
-      box-shadow: 2px 4px rgba(0, 0, 0, 0.3);
+      filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.3));
     }
     section {
       flex: 1;
+    }
+    .shadow {
+      position: absolute;
+      inset: 20px;
+      box-shadow: 4px 3px 20px 15px rgba(0, 0, 0, 0.3);
+    }
+    .shadow::before {
+      content: '';
+      display: block;
+      position: absolute;
+      inset: 0;
+      box-shadow: -12px -5px 20px 9px rgba(0, 0, 0, 0.3);
     }
     .visual_container {
       padding: 40px;
@@ -68,6 +84,7 @@
 </head>
 <body>
   <main>
+    <div class="shadow"></div>
     <section id="visual">
       <div class="visual_container">
         <p class="badge">온라인</p>
